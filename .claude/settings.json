@@ -7,6 +7,14 @@
     "supabase": {
       "command": "npx",
       "args": ["-y", "@supabase/mcp-server-supabase@latest", "--access-token", "${SUPABASE_ACCESS_TOKEN}"]
+    },
+    "stripe": {
+      "command": "npx",
+      "args": ["-y", "@stripe/mcp", "--api-key", "${STRIPE_SECRET_KEY}"]
+    },
+    "upstash": {
+      "command": "npx",
+      "args": ["-y", "@upstash/mcp-server@latest", "--email", "${UPSTASH_EMAIL}", "--api-key", "${UPSTASH_API_KEY}"]
     }
   }
 }

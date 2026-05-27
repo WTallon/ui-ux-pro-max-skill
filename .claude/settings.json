@@ -3,6 +3,10 @@
     "higgsfield": {
       "type": "url",
       "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--access-token", "${SUPABASE_ACCESS_TOKEN}"]
     }
   }
 }

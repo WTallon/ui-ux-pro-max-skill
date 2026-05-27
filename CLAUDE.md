@@ -88,6 +88,32 @@ When modifying files:
 
 Python 3.x (no external dependencies required)
 
+## Security Requirements (Apply to Every Build)
+
+Whenever asked to build, create, or add any feature, automatically apply all four of these:
+
+**1. Rate Limiting**
+- Add rate limiting to every endpoint
+- Authentication routes: max 5 attempts per 15 minutes per IP
+- Use a middleware or library appropriate to the stack (e.g. `express-rate-limit`, `slowapi`, `upstash/ratelimit`)
+
+**2. No Hardcoded Secrets**
+- Scan the entire codebase for hardcoded API keys, tokens, passwords, or connection strings
+- Move everything to environment variables
+- Confirm nothing sensitive is bundled into the frontend or committed to git
+- Ensure `.env` and `.env.local` are in `.gitignore`
+
+**3. Input Validation & Sanitization**
+- Sanitize every user input on the server side
+- Reject oversized payloads (set explicit body size limits)
+- Reject malformed or unexpected data shapes before processing
+- Never trust client-side validation alone
+
+**4. Security Audit**
+- After implementing any feature, do a full security audit
+- List any remaining vulnerabilities with severity and recommended fix
+- Check for OWASP Top 10: injection, broken auth, XSS, IDOR, misconfig, etc.
+
 ## Git Workflow
 
 Never push directly to `main`. Always:

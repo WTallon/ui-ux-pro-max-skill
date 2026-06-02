@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #080808;
+  --surface: #111111;
+  --accent: #E8FF47;
+  --pink: #FF3366;
+  --blue: #00D4FF;
+  --orange: #FF9500;
+  --purple: #9B59B6;
+  --text: #FFFFFF;
+  --text-secondary: #888888;
+  --border: #222222;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  background-color: #080808;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: #222222; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #333; }
+
+@keyframes heat-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 255, 71, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(232, 255, 71, 0); }
+}
+.heat-90plus { animation: heat-pulse 2s ease-in-out infinite; }
+
+@keyframes wave-bar {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+.wave-bar { animation: wave-bar 1.2s ease-in-out infinite; }
+.wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.wave-bar:nth-child(5) { animation-delay: 0.4s; }
+
+.gradient-text {
+  background: linear-gradient(90deg, #E8FF47, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+  border-color: #333;
+  transform: translateY(-1px);
+}
+
+.badge-unreleased { box-shadow: 0 0 8px rgba(255, 51, 102, 0.5); }
+.badge-accent { box-shadow: 0 0 8px rgba(232, 255, 71, 0.3); }
+
+.pb-safe { padding-bottom: max(env(safe-area-inset-bottom), 80px); }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

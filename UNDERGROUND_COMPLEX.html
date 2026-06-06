@@ -316,21 +316,21 @@ async function unlock() {
     <a href="#roles">04 — Six User Roles</a>
     <a href="#design">05 — Design System</a>
     <a href="#stack">06 — Tech Stack</a>
-    <a href="#schema">07 — Database Schema (22 Tables)</a>
-    <a href="#routes">08 — All Pages & Routes (26)</a>
+    <a href="#schema">07 — Database Schema</a>
+    <a href="#routes">08 — All Pages & Routes</a>
     <a href="#features">09 — Core Feature Details</a>
     <a href="#pipelines">10 — Audio ID & Setlist Pipelines</a>
     <a href="#heatscore">11 — Heat Score Formula</a>
-    <a href="#reputation">12 — Fan Reputation System</a>
+    <a href="#reputation">12 — Scene Status & Reputation</a>
     <a href="#business">13 — Business Model & Revenue</a>
     <a href="#pricing">14 — Pricing Tiers</a>
-    <a href="#roadmap">15 — Build Roadmap (7 Phases)</a>
-    <a href="#weeklyplan">16 — 24-Week Plan & Hours</a>
+    <a href="#roadmap">15 — Build Roadmap (All Phases)</a>
+    <a href="#weeklyplan">16 — 24-Week Plan + Post-Launch</a>
     <a href="#costs">17 — Full Cost Breakdown</a>
     <a href="#apikeys">18 — How to Get Every API Key</a>
     <a href="#envvars">19 — Environment Variables</a>
     <a href="#security">20 — Security Requirements</a>
-    <a href="#marketing">20 — Launch Plan (Full Strategy)</a>
+    <a href="#marketing">21 — Launch Plan (Full Strategy)</a>
     <a href="#competitive">22 — Competitive Position</a>
     <a href="#viability">23 — Business Viability Assessment</a>
     <a href="#status">24 — Current Status</a>
@@ -343,31 +343,91 @@ async function unlock() {
 <div class="section" id="vision">
   <div class="section-label">Section 01</div>
   <h2 class="section-title">WHAT UNDERGROUND IS</h2>
+
   <div class="card card-yellow">
-    <p style="font-size:20px;color:#fff;font-weight:500;">Underground is the social scene for electronic music.</p>
-    <p>Not a track ID app. Not a ticketing platform. Not a music database. A social network where the community, the music, the events, and the culture all live in one place.</p>
-    <p style="font-family:'DM Mono',monospace;font-size:13px;color:#E8FF47;">The scene first. Every feature second.</p>
+    <p style="font-size:22px;color:#fff;font-weight:700;letter-spacing:1px;">The operating system for EDM culture.</p>
+    <p style="margin-top:8px;">Not a track ID app. Not a ticketing platform. Not a social network. The OS — where every part of the scene lives in one place, and everything else becomes a feature.</p>
+    <p style="font-family:'DM Mono',monospace;font-size:13px;color:#E8FF47;margin:0;">Community first. Software second. Culture always.</p>
   </div>
-  <p>Instagram, TikTok, SoundCloud, Eventbrite, Beatport, Resident Advisor, Bandsintown, 1001Tracklists, Discord — fans currently use all of these badly. Underground replaces them all with one feed that understands EDM culture.</p>
+
+  <h3>TWO WAYS IN — ONE DESTINATION</h3>
+  <p>People join Underground for one of two reasons. Both lead to the same place.</p>
+  <div class="pillars" style="margin-bottom:24px;">
+    <div class="pillar moat">
+      <div class="pillar-num">ENTRY POINT A — THE WEDGE</div>
+      <div class="pillar-name">TRACK IDs + EVENTS</div>
+      <p style="font-size:13px;color:#ccc;margin-bottom:8px;">"What track was that?" and "What's happening tonight?" are the two questions EDM fans ask every single week. Underground answers both better than anything else.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:11px;color:#E8FF47;margin:0;">Market as: "The best place to discover IDs, track what DJs are playing, and find EDM events."</p>
+    </div>
+    <div class="pillar moat">
+      <div class="pillar-num">ENTRY POINT B — THE SCENE</div>
+      <div class="pillar-name">SOCIAL + CULTURE</div>
+      <p style="font-size:13px;color:#ccc;margin-bottom:8px;">For fans who already know they want a social network built for the scene. Post set reviews, festival clips, hot takes, rankings, predictions. Follow DJs. Build status.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:11px;color:#E8FF47;margin:0;">Market as: "Instagram for EDM. Built by the scene, for the scene."</p>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:24px;">
+    <p style="font-size:13px;color:#888;margin:0;">Both entry points lead to the same experience: a feed, a community, and an identity in the scene. The wedge users discover the social layer. The social users discover the track ID and radar tools. Over time there is no difference.</p>
+  </div>
+
+  <h3>THE DAILY HABIT LOOP</h3>
+  <p>Apps that people open because of a specific reason become habits. Underground gives users five reasons to open every day:</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px;">
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#E8FF47;margin-bottom:4px;">HEAT</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">Heat Score changed on a track you follow</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#E8FF47;margin-bottom:4px;">ID</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">Someone solved your track ID request</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#E8FF47;margin-bottom:4px;">PLAY</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">A DJ you follow played a track last night</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#E8FF47;margin-bottom:4px;">DROP</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">Track you've been tracking finally released</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#E8FF47;margin-bottom:4px;">EVENT</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">New event announced near you</div>
+    </div>
+    <div class="card card-yellow" style="text-align:center;padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#E8FF47;margin-bottom:4px;">STATUS</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">You moved up the city leaderboard</div>
+    </div>
+  </div>
+  <div class="card card-yellow">
+    <p style="font-size:14px;color:#fff;font-weight:500;margin-bottom:4px;">If people only open the app when they need tickets, you'll struggle. If they open it every day, that's where growth happens.</p>
+    <p style="font-size:12px;color:#888;margin:0;">The habit loop is not a feature — it is the product strategy.</p>
+  </div>
+
+  <h3>WHAT UNDERGROUND REPLACES</h3>
+  <p>Instagram, TikTok, SoundCloud, Eventbrite, Beatport, Resident Advisor, Bandsintown, 1001Tracklists, Discord — fans use all of these badly because none of them were built for EDM culture. Underground is.</p>
+
   <h4>Open the app and see:</h4>
   <div class="card">
     <ul style="list-style:none;padding:0;">
-      <li style="padding:6px 0;color:#ccc;font-size:14px;">→ Chris Stussy just announced he's playing Miami Friday</li>
-      <li style="padding:6px 0;color:#ccc;font-size:14px;">→ New track from a producer you follow</li>
-      <li style="padding:6px 0;color:#ccc;font-size:14px;">→ A warehouse rave tonight 2 miles from you</li>
-      <li style="padding:6px 0;color:#ccc;font-size:14px;">→ Someone asking for a track ID from Berghain last night</li>
-      <li style="padding:6px 0;color:#ccc;font-size:14px;">→ Ultra Miami lineup just dropped</li>
-      <li style="padding:6px 0;color:#ccc;font-size:14px;">→ Venue posted the aftermovie from last weekend</li>
+      <li style="padding:6px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:14px;">→ Chris Stussy just announced he's playing Miami Friday</li>
+      <li style="padding:6px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:14px;">→ New track from a producer you follow</li>
+      <li style="padding:6px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:14px;">→ A warehouse rave tonight 2 miles from you</li>
+      <li style="padding:6px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:14px;">→ Someone just solved your track ID from Berghain last night</li>
+      <li style="padding:6px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:14px;">→ Ultra Miami lineup just dropped</li>
+      <li style="padding:6px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:14px;">→ Venue posted the aftermovie from last weekend</li>
+      <li style="padding:6px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:14px;">→ Your scene status just leveled up to Curator</li>
       <li style="padding:6px 0;color:#E8FF47;font-size:14px;font-family:'DM Mono',monospace;">→ Unreleased ID you've been tracking just hit Heat Score 97</li>
     </ul>
   </div>
-  <table>
+
+  <table style="margin-top:24px;">
     <tr><th>Property</th><th>Value</th></tr>
     <tr><td>Domain</td><td style="color:#E8FF47;font-family:'DM Mono',monospace;">ugscene.app</td></tr>
-    <tr><td>Tagline</td><td>"Everything electronic in one place."</td></tr>
-    <tr><td>Replaces</td><td>Instagram + TikTok + SoundCloud + Eventbrite + Beatport + RA + Bandsintown + 1001Tracklists + Discord</td></tr>
-    <tr><td>Primary audience</td><td>Electronic music fans, DJs, producers, venues, promoters, labels</td></tr>
-    <tr><td>Launch target</td><td>One city first (Miami, Chicago, or London)</td></tr>
+    <tr><td>Positioning</td><td style="color:#E8FF47;">"The operating system for EDM culture."</td></tr>
+    <tr><td>External tagline</td><td>"Everything electronic in one place."</td></tr>
+    <tr><td>Wedge tagline</td><td>"The best place to discover IDs, track what DJs are playing, and find events."</td></tr>
+    <tr><td>Primary audience</td><td>Electronic music fans, DJs, producers, venues, promoters</td></tr>
+    <tr><td>Launch city</td><td style="color:#E8FF47;">Miami — University of Miami campus + local scene</td></tr>
     <tr><td>Version</td><td>4.0 — The Complete Outline</td></tr>
   </table>
 </div>
@@ -826,9 +886,103 @@ subscriptions
   </table>
 </div>
 
-<!-- SECTION 9: PIPELINES -->
-<div class="section" id="pipelines">
+<!-- SECTION 9: CORE FEATURES -->
+<div class="section" id="features">
   <div class="section-label">Section 09</div>
+  <h2 class="section-title">CORE FEATURE DETAILS</h2>
+
+  <h3>FAN UGC — WHAT FANS POST EVERY DAY</h3>
+  <p>Too much content on most platforms comes from DJs, venues, and promoters. Those are important but they won't create enough volume. Fans need clear reasons and formats to post every day. The more fans post, the harder Underground is to copy.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px;">
+    <div class="card"><strong style="color:#E8FF47;">Track IDs</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">Upload 30-sec clip from a set. Ask the community. Most-played content type on the platform.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">Set Reviews</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">Text or video review of a DJ set they attended. Rating, standout tracks, energy breakdown.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">Festival Clips</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">Short video from an event. Auto-tagged to venue + event. Track recognition overlay fires automatically.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">Event Photos</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">Photo post linked to an event. Builds the visual archive of every venue and festival.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">DJ Rankings</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">"My top 5 DJs playing Miami right now." These posts generate comments, debate, and follows.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">Hot Takes</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">"This track is going to be massive." "This DJ peaked in 2022." Controversial = high engagement.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">Predictions</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">"Predict the closing track for Ultra main stage." Creates community games before events.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">Fan Setlists</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">Manually build the setlist from a show they attended. Community verifies and upvotes correct tracks.</p></div>
+    <div class="card"><strong style="color:#E8FF47;">Scene Reports</strong><p style="font-size:12px;color:#888;margin:6px 0 0;">"What's happening in Miami this month." City scene context that no algorithm can generate.</p></div>
+  </div>
+
+  <h3>EDM PASSPORT</h3>
+  <p>Every event a user attends gets logged. Every DJ they see. Every venue they visit. This becomes a visual identity — proof of who you are in the scene.</p>
+  <div class="card card-yellow" style="margin-bottom:16px;">
+    <p style="font-size:14px;color:#fff;font-weight:500;margin-bottom:12px;">Example: Will's Passport</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <p style="font-family:'DM Mono',monospace;font-size:11px;color:#E8FF47;letter-spacing:2px;margin-bottom:8px;">EVENTS ATTENDED</p>
+        <ul style="list-style:none;padding:0;">
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ Ultra Miami 2025</li>
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ Club Space — 3 visits</li>
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ III Points 2024</li>
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ Factory Town — 6 visits</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:'DM Mono',monospace;font-size:11px;color:#E8FF47;letter-spacing:2px;margin-bottom:8px;">DJS SEEN LIVE</p>
+        <ul style="list-style:none;padding:0;">
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ Chris Stussy</li>
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ KETTAMA</li>
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ Mau P</li>
+          <li style="font-size:13px;color:#ccc;padding:3px 0;">→ Innellea</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#888;margin-top:12px;margin-bottom:0;">Fans love tracking this. It becomes a shareable identity card. "Send your passport" becomes a thing in the community.</p>
+  </div>
+  <div class="card">
+    <h4>How passport stamps are earned</h4>
+    <ul style="list-style:none;padding:0;">
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;font-size:13px;color:#ccc;">→ Check in at an event via the app (geolocation or QR scan)</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;font-size:13px;color:#ccc;">→ Upload a clip from the event (auto-tags the venue)</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;font-size:13px;color:#ccc;">→ Post a set review tagged to a DJ and event</li>
+      <li style="padding:5px 0;font-size:13px;color:#ccc;">→ RSVP + mark as attended after the event</li>
+    </ul>
+  </div>
+
+  <h3>ANNUAL UNDERGROUND LISTS</h3>
+  <p>Published once a year. Sounds simple. Creates enormous engagement. People argue about rankings endlessly — that drives weekly active users all December.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px;">
+    <div class="card" style="text-align:center;padding:20px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#E8FF47;">Top 100 IDs</div><div style="font-size:11px;color:#555;margin-top:4px;">Most-hunted unreleased tracks</div></div>
+    <div class="card" style="text-align:center;padding:20px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#E8FF47;">Top 100 DJs</div><div style="font-size:11px;color:#555;margin-top:4px;">Underground's own DJ ranking — not DJ Mag</div></div>
+    <div class="card" style="text-align:center;padding:20px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#E8FF47;">Rising Producers</div><div style="font-size:11px;color:#555;margin-top:4px;">Artists who broke through this year</div></div>
+    <div class="card" style="text-align:center;padding:20px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#E8FF47;">Top Venues</div><div style="font-size:11px;color:#555;margin-top:4px;">Voted by fans who attended</div></div>
+    <div class="card" style="text-align:center;padding:20px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#E8FF47;">Top Cities</div><div style="font-size:11px;color:#555;margin-top:4px;">Most active scenes worldwide</div></div>
+    <div class="card" style="text-align:center;padding:20px;"><div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#E8FF47;">Track of the Year</div><div style="font-size:11px;color:#555;margin-top:4px;">Community vote + Heat Score data</div></div>
+  </div>
+  <p style="color:#888;font-size:13px;">These lists are a PR event. Music press covers them. DJs share when they're on them. Artists campaign for votes. It's free distribution every December.</p>
+
+  <h3>THE EDM GRAPH — YOUR DATA MOAT</h3>
+  <p>Every interaction on Underground builds a graph that no competitor can buy or copy. This is the long-term moat.</p>
+  <div class="pipeline">
+    <div class="pipeline-step"><div class="step-arrow">→</div><div class="step-content"><div class="step-title">User → Track</div><div class="step-detail">Which fans follow which tracks. Who identified what. Who saved what before it blew up.</div></div></div>
+    <div class="pipeline-step"><div class="step-arrow">→</div><div class="step-content"><div class="step-title">User → DJ</div><div class="step-detail">Which fans follow which DJs. Who discovered a DJ early. Who attends their shows regularly.</div></div></div>
+    <div class="pipeline-step"><div class="step-arrow">→</div><div class="step-content"><div class="step-title">DJ → Track</div><div class="step-detail">Which DJs are playing which tracks. Who breaks tracks first. Which DJs have overlapping audiences.</div></div></div>
+    <div class="pipeline-step"><div class="step-arrow">→</div><div class="step-content"><div class="step-title">City → Trend</div><div class="step-detail">Which tracks are blowing up in which cities before going global. Predictive signals for labels.</div></div></div>
+    <div class="pipeline-step"><div class="step-arrow">→</div><div class="step-content"><div class="step-title">Time → Prediction</div><div class="step-detail">At scale: which tracks with Heat Score 60 today will hit 90 in 3 weeks. Underground becomes a predictive intelligence layer.</div></div></div>
+  </div>
+  <div class="card card-yellow" style="margin-top:16px;">
+    <p style="font-size:13px;color:#fff;margin:0;">Eventually you know: what every user likes, which DJs overlap in audience, which cities are growing, which tracks are exploding. This data becomes extremely valuable to labels, booking agencies, and festival promoters — and it only exists on Underground.</p>
+  </div>
+
+  <h3>DISCOVERY — BETTER THAN TIKTOK FOR EDM</h3>
+  <p>EDM discovery today is fragmented. Fans bounce between Instagram, TikTok, SoundCloud, Spotify, and Resident Advisor trying to piece together what's happening. Underground consolidates it.</p>
+  <div class="card">
+    <p style="color:#ccc;margin-bottom:12px;">Open Underground and instantly see:</p>
+    <ul style="list-style:none;padding:0;">
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ Trending IDs this week in your city</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ Local events tonight sorted by distance</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ New posts from DJs you follow</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ New releases + Heat Score changes</li>
+      <li style="padding:5px 0;color:#E8FF47;font-size:13px;font-family:'DM Mono',monospace;">→ Tracks your followed DJs played this week — before anyone else knows</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECTION 10: PIPELINES -->
+<div class="section" id="pipelines">
+  <div class="section-label">Section 10</div>
   <h2 class="section-title">AUDIO ID & SETLIST PIPELINES</h2>
 
   <h3>AUDIO ID PIPELINE</h3>
@@ -911,7 +1065,7 @@ This is legally correct from day one.</code></pre>
 
 <!-- SECTION 10: HEAT SCORE -->
 <div class="section" id="heatscore">
-  <div class="section-label">Section 10</div>
+  <div class="section-label">Section 11</div>
   <h2 class="section-title">HEAT SCORE FORMULA</h2>
   <p>Proprietary 0–100 score. Computed nightly via Supabase Edge Function. This is what makes Underground Radar unique.</p>
   <div class="heat-grid">
@@ -932,101 +1086,200 @@ This is legally correct from day one.</code></pre>
   </div>
 </div>
 
-<!-- SECTION 11: REPUTATION -->
+<!-- SECTION 12: REPUTATION -->
 <div class="section" id="reputation">
-  <div class="section-label">Section 11</div>
-  <h2 class="section-title">FAN REPUTATION SYSTEM</h2>
-  <p>Quality control for community IDs + the reason superfans stay engaged.</p>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
-    <div class="card" style="text-align:center;">
-      <div style="font-size:28px;margin-bottom:8px;">🔍</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;">ID Hunter</div>
-      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">Level 1 · 0–500 XP</div>
+  <div class="section-label">Section 12</div>
+  <h2 class="section-title">SCENE STATUS & REPUTATION SYSTEM</h2>
+  <p>Reddit has karma. Discord has roles. GitHub has contributions. Underground has Scene Status — the proof of who you are in electronic music. People love status. Status creates retention. Status creates identity. Identity creates evangelists.</p>
+
+  <h3>SIX LEVELS OF SCENE STATUS</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px;">
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#555;letter-spacing:2px;margin-bottom:8px;">LEVEL 1</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#888;">Local</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#555;margin-top:4px;">0–200 XP</div>
+      <div style="font-size:12px;color:#555;margin-top:8px;">New to the scene. Just showed up.</div>
     </div>
-    <div class="card" style="text-align:center;">
-      <div style="font-size:28px;margin-bottom:8px;">💿</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;">Crate Digger</div>
-      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">Level 2 · 500–2K XP</div>
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#555;letter-spacing:2px;margin-bottom:8px;">LEVEL 2</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#ccc;">Regular</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#555;margin-top:4px;">200–1K XP</div>
+      <div style="font-size:12px;color:#555;margin-top:8px;">Posts, attends events, engages.</div>
     </div>
-    <div class="card card-yellow" style="text-align:center;">
-      <div style="font-size:28px;margin-bottom:8px;">⚡</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#E8FF47;">Underground Expert</div>
-      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">Level 3 · 2K–10K XP</div>
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#555;letter-spacing:2px;margin-bottom:8px;">LEVEL 3</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#fff;">Resident</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#555;margin-top:4px;">1K–5K XP</div>
+      <div style="font-size:12px;color:#555;margin-top:8px;">Solves IDs, builds crates, known locally.</div>
     </div>
-    <div class="card" style="text-align:center;border-color:#FF9500;">
-      <div style="font-size:28px;margin-bottom:8px;">👑</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#FF9500;">Scene Legend</div>
-      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;">Level 4 · 10K+ XP</div>
+    <div class="card card-yellow" style="text-align:center;padding:20px;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;letter-spacing:2px;margin-bottom:8px;">LEVEL 4</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#E8FF47;">Curator</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;margin-top:4px;">5K–15K XP</div>
+      <div style="font-size:12px;color:#888;margin-top:8px;">People follow your crates. Known for taste.</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;border-color:#FF9500;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#FF9500;letter-spacing:2px;margin-bottom:8px;">LEVEL 5</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#FF9500;">Tastemaker</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#555;margin-top:4px;">15K–50K XP</div>
+      <div style="font-size:12px;color:#555;margin-top:8px;">Discovers tracks before they blow up. Cited in the scene.</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;border-color:#E8FF47;background:#0a0f00;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#E8FF47;letter-spacing:2px;margin-bottom:8px;">LEVEL 6 — RARE</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#E8FF47;">Scene Legend</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:#888;margin-top:4px;">50K+ XP</div>
+      <div style="font-size:12px;color:#888;margin-top:8px;">Irreplaceable. The community knows who you are.</div>
     </div>
   </div>
-  <h4>How to earn XP</h4>
+
+  <h3>EARNING XP — EVERY ACTION COUNTS</h3>
+  <h4>Track ID & Discovery</h4>
   <div class="xp-grid">
-    <div class="xp-item"><span class="xp-action">Solve a community ID</span><span class="xp-value">+50</span></div>
-    <div class="xp-item"><span class="xp-action">Correct ID confirmed by community</span><span class="xp-value">+100</span></div>
+    <div class="xp-item"><span class="xp-action">Submit an answer to a community ID</span><span class="xp-value">+50</span></div>
+    <div class="xp-item"><span class="xp-action">Your ID confirmed correct by upvotes</span><span class="xp-value">+100</span></div>
     <div class="xp-item"><span class="xp-action">First person to correctly ID a track</span><span class="xp-value">+200</span></div>
-    <div class="xp-item"><span class="xp-action">ID confirmed by the artist</span><span class="xp-value">+500</span></div>
-    <div class="xp-item"><span class="xp-action">Add track to setlist manually</span><span class="xp-value">+25</span></div>
-    <div class="xp-item"><span class="xp-action">Daily login streak</span><span class="xp-value">+5/day</span></div>
-    <div class="xp-item"><span class="xp-action">Post a set that generates 10+ IDs</span><span class="xp-value">+100</span></div>
-    <div class="xp-item"><span class="xp-action">Invite a DJ who joins and posts</span><span class="xp-value">+150</span></div>
+    <div class="xp-item"><span class="xp-action">ID confirmed by the artist themselves</span><span class="xp-value">+500</span></div>
+    <div class="xp-item"><span class="xp-action">You followed a track before Heat Score 50 — it hits 90+</span><span class="xp-value">+300</span></div>
+    <div class="xp-item"><span class="xp-action">Track you discovered gets officially released</span><span class="xp-value">+250</span></div>
+  </div>
+  <h4>Content & Community</h4>
+  <div class="xp-grid">
+    <div class="xp-item"><span class="xp-action">Post any content (text, video, photo)</span><span class="xp-value">+10</span></div>
+    <div class="xp-item"><span class="xp-action">Post gets 20+ likes</span><span class="xp-value">+50</span></div>
+    <div class="xp-item"><span class="xp-action">Post a set review with 200+ words</span><span class="xp-value">+75</span></div>
+    <div class="xp-item"><span class="xp-action">Post a festival clip that gets 50+ views</span><span class="xp-value">+100</span></div>
+    <div class="xp-item"><span class="xp-action">Build a public crate with 10+ tracks</span><span class="xp-value">+80</span></div>
+    <div class="xp-item"><span class="xp-action">Your crate gets 10+ followers</span><span class="xp-value">+150</span></div>
+  </div>
+  <h4>Scene Participation</h4>
+  <div class="xp-grid">
+    <div class="xp-item"><span class="xp-action">Attend an event (check-in or clip)</span><span class="xp-value">+100</span></div>
+    <div class="xp-item"><span class="xp-action">Attend 5 events in one month</span><span class="xp-value">+300</span></div>
+    <div class="xp-item"><span class="xp-action">Manually submit a fan setlist</span><span class="xp-value">+75</span></div>
+    <div class="xp-item"><span class="xp-action">Daily app open streak (7-day)</span><span class="xp-value">+50</span></div>
+    <div class="xp-item"><span class="xp-action">Invite a DJ who joins and posts</span><span class="xp-value">+200</span></div>
+    <div class="xp-item"><span class="xp-action">Refer a user who stays 30+ days</span><span class="xp-value">+150</span></div>
+  </div>
+
+  <h3>EDM PASSPORT</h3>
+  <p>The Passport is the visual record of your life in the scene. Displayed on every profile. Shareable. Becomes a social object fans compare and compete with.</p>
+  <div class="card">
+    <table style="margin:0;">
+      <tr><th>Passport Stamp</th><th>How Earned</th><th>Displayed As</th></tr>
+      <tr><td style="color:#E8FF47;">Event Attended</td><td>Check-in, clip upload, or RSVP + mark attended</td><td>Event badge on passport grid</td></tr>
+      <tr><td style="color:#E8FF47;">DJ Seen Live</td><td>Attend an event where that DJ played</td><td>DJ avatar added to passport</td></tr>
+      <tr><td style="color:#E8FF47;">Venue Visited</td><td>Check in at a venue</td><td>Venue badge with visit count</td></tr>
+      <tr><td style="color:#E8FF47;">City Explored</td><td>Attend an event in a new city</td><td>City pin on a globe visual</td></tr>
+      <tr><td style="color:#E8FF47;">Festival Badge</td><td>Attend a named festival</td><td>Festival artwork stamp</td></tr>
+      <tr><td style="color:#E8FF47;">Early Adopter</td><td>Joined before public launch</td><td>Permanent gold badge</td></tr>
+    </table>
+  </div>
+  <div class="card card-yellow" style="margin-top:16px;">
+    <p style="font-size:13px;color:#fff;margin:0;">"Send me your passport" becomes a thing in the community. Users share them on Instagram. Every shared passport is a free ad for Underground.</p>
+  </div>
+
+  <h3>SPECIAL BADGES</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+    <div class="card" style="text-align:center;padding:16px;border-color:#E8FF47;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#E8FF47;">Founder</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">Joined waitlist before launch. Permanent. Never available again.</div>
+    </div>
+    <div class="card" style="text-align:center;padding:16px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;">Campus Ambassador</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">Recruited as UM/FSU/UCF/FIU rep. Referral code attached to profile.</div>
+    </div>
+    <div class="card" style="text-align:center;padding:16px;border-color:#FF9500;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#FF9500;">First ID</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">First person to correctly ID a specific track. Permanent on that track's page.</div>
+    </div>
+    <div class="card" style="text-align:center;padding:16px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;">City OG</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">First 100 users in a city. Permanent city badge on profile.</div>
+    </div>
+    <div class="card" style="text-align:center;padding:16px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;">Tastemaker</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">Followed 5+ tracks before they hit Heat Score 90+.</div>
+    </div>
+    <div class="card" style="text-align:center;padding:16px;border-color:#E8FF47;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#E8FF47;">Legend</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">Community nominated. Top 1% of contributors city-wide.</div>
+    </div>
   </div>
 </div>
 
 
-<!-- SECTION 12: BUSINESS MODEL -->
+<!-- SECTION 13: BUSINESS MODEL -->
 <div class="section" id="business">
-  <div class="section-label">Section 12</div>
+  <div class="section-label">Section 13</div>
   <h2 class="section-title">BUSINESS MODEL & REVENUE</h2>
+
+  <div class="card card-yellow" style="margin-bottom:24px;">
+    <p style="font-size:14px;color:#fff;font-weight:500;margin-bottom:8px;">Revenue rule: community adoption unlocks each revenue tier. Do not optimize for money before you have retention. A platform with 500 daily active users and $0 revenue is more valuable than one with $2K/month and declining engagement.</p>
+    <p style="font-size:12px;color:#888;margin:0;">Focus order: community → retention → ticketing → subscriptions → marketplace → advertising → data.</p>
+  </div>
+
   <div class="revenue-grid">
-    <div class="revenue-card">
+    <div class="revenue-card" style="border-color:#E8FF47;">
       <div class="revenue-num">01</div>
-      <div class="revenue-name">Ticketing — Day 1</div>
-      <p style="font-size:13px;color:#888;">Venues list events free. Underground takes $1.50–$2.50 per ticket (2.5%). Stripe Connect pays venues directly. We never hold funds.</p>
+      <div class="revenue-name">Ticketing — Month 6 (500 WAU)</div>
+      <p style="font-size:13px;color:#888;">Venues list events free. Underground takes $1.50–$2.50 per ticket (2.5%). Stripe Connect pays venues directly. We never hold funds. Starts as RSVP-only, upgrades to real tickets when retention is proven.</p>
       <div class="revenue-amount">$36,000/week at scale</div>
       <div style="font-family:'DM Mono',monospace;font-size:10px;color:#555;margin-top:4px;">20 venues × 3 nights × 300 tickets × $2</div>
     </div>
     <div class="revenue-card">
       <div class="revenue-num">02</div>
-      <div class="revenue-name">Promoted Placement — Day 1</div>
-      <p style="font-size:13px;color:#888;">DJs, labels, venues, promoters pay for featured placement. Feed boost, search top, city page boost, release spotlight, event spotlight, TV boost.</p>
-      <div class="revenue-amount">$50–$500/week per placement</div>
-      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#555;margin-top:4px;">Self-serve dashboard. No sales team needed.</div>
+      <div class="revenue-name">Pro Subscriptions — Month 4</div>
+      <p style="font-size:13px;color:#888;">Fan Pass $5/mo (advanced radar, no ads, passport export) · DJ Pro $15/mo (analytics, booking tools) · Venue Pro $50/mo (event dashboard, promoted). Free must be genuinely useful — Pro adds power, not access.</p>
+      <div class="revenue-amount">$5–$50/user/month</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:#555;margin-top:4px;">Start with Fan Pass + DJ Pro only. Add Venue Pro at Month 6.</div>
     </div>
     <div class="revenue-card">
       <div class="revenue-num">03</div>
-      <div class="revenue-name">Booking Marketplace Fee</div>
-      <p style="font-size:13px;color:#888;">Underground takes 5% of confirmed bookings made through the platform. Free DJs see locked booking requests — unlock with DJ Pro.</p>
-      <div class="revenue-amount">5% of confirmed bookings</div>
+      <div class="revenue-name">Promoted Placement — Month 6</div>
+      <p style="font-size:13px;color:#888;">Venues and promoters pay for featured event placement. Feed boost, city page top, Tonight Near Me pin. Self-serve Stripe dashboard. No sales team needed. Only worth buying when the platform has real audience.</p>
+      <div class="revenue-amount">$50–$500/week per placement</div>
     </div>
     <div class="revenue-card">
       <div class="revenue-num">04</div>
-      <div class="revenue-name">Pro Subscriptions</div>
-      <p style="font-size:13px;color:#888;">Fan Pass $5/mo · DJ Pro $15/mo · Venue Pro $50–200/mo · Label Pro $49–500/mo. Pro unlocks tools, not the platform. Free is genuinely useful.</p>
-      <div class="revenue-amount">$5–$500/user/month</div>
+      <div class="revenue-name">Booking Marketplace — Month 10</div>
+      <p style="font-size:13px;color:#888;">Underground takes 5% of confirmed bookings. Only build this after 2,500 users — the marketplace needs volume to work. Free DJs see locked booking requests (unlock with DJ Pro).</p>
+      <div class="revenue-amount">5% of confirmed bookings</div>
     </div>
     <div class="revenue-card">
       <div class="revenue-num">05</div>
-      <div class="revenue-name">Affiliate Links — at 10K users</div>
-      <p style="font-size:13px;color:#888;">Pioneer DJ gear, Ableton, Native Instruments, Splice, Plugin Boutique. Contextual and zero friction.</p>
+      <div class="revenue-name">Affiliate Links — Month 8 (1K users)</div>
+      <p style="font-size:13px;color:#888;">Pioneer DJ gear, Ableton, Native Instruments, Splice, Plugin Boutique. Contextual placement (on DJ profile pages, setlist exports, track pages). Zero friction — these users already buy this stuff.</p>
       <div class="revenue-amount">4–8% commission</div>
     </div>
     <div class="revenue-card">
       <div class="revenue-num">06</div>
-      <div class="revenue-name">Festival & Brand Advertising — at 50K users</div>
-      <p style="font-size:13px;color:#888;">Ultra, Tomorrowland, ADE, Movement, Pioneer DJ, Roland, Output. Sponsored city pages, feed takeovers, event spotlights.</p>
+      <div class="revenue-name">Festival & Brand Advertising — 50K users</div>
+      <p style="font-size:13px;color:#888;">Ultra, Tomorrowland, ADE, Movement, Pioneer DJ, Roland, Output. Sponsored city pages, feed takeovers, event spotlights. This is a long-term play — do not pitch brands before you have scale.</p>
       <div class="revenue-amount">$5K–$50K/deal</div>
     </div>
     <div class="revenue-card" style="grid-column:span 2;">
       <div class="revenue-num">07</div>
-      <div class="revenue-name">Data & Trend Reports — Future</div>
-      <p style="font-size:13px;color:#888;">Anonymized intelligence sold to labels, booking agencies, festivals. "Which unreleased tracks are getting the most ID requests?" "Which DJs are breaking tracks earliest?" "Which cities have the highest demand for a specific artist?"</p>
+      <div class="revenue-name">Data & Intelligence Reports — Future (10K+ users)</div>
+      <p style="font-size:13px;color:#888;">Anonymized trend intelligence sold to labels, booking agencies, festivals. "Which unreleased tracks are getting the most ID requests in Miami?" "Which DJs are breaking tracks earliest?" "Which cities have the highest demand for a specific artist?" This becomes extremely valuable once the EDM graph has real scale. No external data can replicate it.</p>
+      <div class="revenue-amount">B2B licensing — TBD</div>
     </div>
   </div>
+
+  <h3>REVENUE TIMELINE SUMMARY</h3>
+  <table>
+    <tr><th>Milestone</th><th>Revenue Stream Unlocks</th><th>Est. Monthly Revenue</th></tr>
+    <tr><td style="color:#E8FF47;">Launch (Month 4)</td><td>Fan Pass + DJ Pro subscriptions</td><td>$500–$2K</td></tr>
+    <tr><td style="color:#E8FF47;">500 WAU (Month 6)</td><td>Full ticketing + Venue Pro + Promoted Placements</td><td>$2K–$10K</td></tr>
+    <tr><td style="color:#E8FF47;">1,000 WAU (Month 8)</td><td>Affiliate links</td><td>$5K–$20K</td></tr>
+    <tr><td style="color:#E8FF47;">2,500 users (Month 10)</td><td>Booking Marketplace</td><td>$10K–$50K</td></tr>
+    <tr><td style="color:#E8FF47;">10,000 users</td><td>Data reports + brand partnerships begin</td><td>$50K+/mo potential</td></tr>
+    <tr><td style="color:#E8FF47;">50,000 users</td><td>Full brand advertising, festival deals</td><td>$200K+/mo potential</td></tr>
+  </table>
 </div>
 
 <!-- SECTION 13: PRICING -->
 <div class="section" id="pricing">
-  <div class="section-label">Section 13</div>
+  <div class="section-label">Section 14</div>
   <h2 class="section-title">PRICING TIERS</h2>
   <div class="pricing-grid">
     <div class="price-card">
@@ -1098,7 +1351,7 @@ This is legally correct from day one.</code></pre>
 
 <!-- SECTION 14: ROADMAP -->
 <div class="section" id="roadmap">
-  <div class="section-label">Section 14</div>
+  <div class="section-label">Section 15</div>
   <h2 class="section-title">BUILD ROADMAP — ALL FEATURES, EVERY PHASE</h2>
   <p>All 47 tasks across every feature are listed here in the order they get built. Web launches first. Mobile follows. Each phase is fully working before the next begins. This aligns with the 24-week plan and post-launch roadmap in Section 15.</p>
 
@@ -1912,7 +2165,7 @@ NEXT_PUBLIC_SITE_URL=https://ugscene.app</code></pre>
 
 <!-- SECTION 19: SECURITY -->
 <div class="section" id="security">
-  <div class="section-label">Section 19</div>
+  <div class="section-label">Section 20</div>
   <h2 class="section-title">SECURITY REQUIREMENTS</h2>
   <p>These apply to every build. Non-negotiable. Apply all four to every feature.</p>
 
@@ -1964,14 +2217,84 @@ const securityHeaders = [
 </div>
 
 
-<!-- SECTION 20: MARKETING -->
+<!-- SECTION 21: MARKETING -->
 <div class="section" id="marketing">
-  <div class="section-label">Section 20</div>
+  <div class="section-label">Section 21</div>
   <h2 class="section-title">LAUNCH PLAN</h2>
   <div class="card card-yellow" style="margin-bottom:24px;">
     <p style="font-size:20px;color:#fff;font-weight:500;">Win one city. Win one community. Win one habit. Then expand.</p>
     <p style="font-family:'DM Mono',monospace;font-size:13px;color:#E8FF47;margin:0;">Culture first. Software second.</p>
   </div>
+
+  <h3>THE ONE QUESTION THAT DETERMINES EVERYTHING</h3>
+  <div class="card card-yellow" style="margin-bottom:24px;">
+    <p style="font-size:18px;color:#fff;font-weight:500;margin-bottom:8px;">"Can I build a 10,000-person EDM audience before the app is ready?"</p>
+    <p style="font-size:13px;color:#ccc;margin-bottom:8px;">If the answer is yes, your chances of success increase dramatically. Apps rarely blow up because of code. They blow up because the right community already exists when the product arrives.</p>
+    <p style="font-size:13px;color:#E8FF47;margin:0;">Spend the first month trying to answer this question with action, not planning.</p>
+  </div>
+
+  <h3>WAITLIST LEADERBOARD (PRE-LAUNCH)</h3>
+  <p>Before the app launches, create a public waitlist with a points system. This builds the audience, generates social proof, and identifies your most committed early users — before you've written a line of code.</p>
+  <div class="pillars" style="margin-bottom:16px;">
+    <div class="pillar moat">
+      <div class="pillar-num">EARN POINTS BY</div>
+      <div class="pillar-name" style="font-size:18px;">JOINING</div>
+      <ul style="list-style:none;padding:0;margin-top:12px;">
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ Join the waitlist — <span style="color:#E8FF47;">+100 pts</span></li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ Refer a friend who signs up — <span style="color:#E8FF47;">+200 pts each</span></li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ Follow Underground Instagram — <span style="color:#E8FF47;">+50 pts</span></li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ Follow Underground TikTok — <span style="color:#E8FF47;">+50 pts</span></li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;">→ Refer a DJ who signs up — <span style="color:#E8FF47;">+500 pts</span></li>
+      </ul>
+    </div>
+    <div class="pillar moat">
+      <div class="pillar-num">TOP USERS GET</div>
+      <div class="pillar-name" style="font-size:18px;">REWARDS</div>
+      <ul style="list-style:none;padding:0;margin-top:12px;">
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ Permanent <strong style="color:#E8FF47;">Founder badge</strong> on profile</li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ First access when app launches</li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ Free premium for life (top 100)</li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a2a00;">→ Campus Ambassador role</li>
+        <li style="font-size:13px;color:#ccc;padding:4px 0;">→ Exclusive merch drop (top 50)</li>
+      </ul>
+    </div>
+  </div>
+  <p style="color:#888;font-size:13px;">The leaderboard is public. People share their rank. People compete to move up. Every share is organic reach. Build this on a simple landing page (Typedream, Framer, or basic Next.js) before the app exists.</p>
+
+  <h3>CAMPUS AMBASSADOR PROGRAM</h3>
+  <p>University campuses are the fastest growth channel for an app targeting 18–25 year-old EDM fans. You're already at UM — use it.</p>
+  <div class="card card-yellow" style="margin-bottom:16px;">
+    <p style="font-size:14px;color:#fff;font-weight:500;margin-bottom:12px;">Recruit 5 students from each of these schools:</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+      <div style="background:#111;border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#E8FF47;">UM</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;margin-top:4px;">University of Miami</div>
+      </div>
+      <div style="background:#111;border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#E8FF47;">FSU</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;margin-top:4px;">Florida State</div>
+      </div>
+      <div style="background:#111;border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#E8FF47;">UCF</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;margin-top:4px;">University of Central Florida</div>
+      </div>
+      <div style="background:#111;border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#E8FF47;">FIU</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;margin-top:4px;">Florida International</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h4>Each Campus Ambassador Gets</h4>
+    <ul style="list-style:none;padding:0;">
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ Personal referral code (track every signup they drive)</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ Permanent Founder role + Campus Ambassador badge on their profile</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ Free premium for life</li>
+      <li style="padding:5px 0;border-bottom:1px solid #1a1a1a;color:#ccc;font-size:13px;">→ Exclusive Underground merch when it drops</li>
+      <li style="padding:5px 0;color:#ccc;font-size:13px;">→ First access to event partnerships at their university</li>
+    </ul>
+  </div>
+  <p style="color:#888;font-size:13px;margin-top:12px;">20 ambassadors across 4 schools = 20 people whose personal brand is tied to Underground's success. This is probably the fastest growth channel available to you.</p>
 
   <h3>DO NOT BUILD EVERYTHING AT ONCE</h3>
   <div class="pillars" style="margin-bottom:24px;">
@@ -2324,7 +2647,7 @@ const securityHeaders = [
 
 <!-- SECTION 21: COMPETITIVE -->
 <div class="section" id="competitive">
-  <div class="section-label">Section 21</div>
+  <div class="section-label">Section 22</div>
   <h2 class="section-title">COMPETITIVE POSITION</h2>
   <div style="overflow-x:auto;">
   <table>

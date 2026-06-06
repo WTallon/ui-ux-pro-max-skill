@@ -1223,100 +1223,299 @@ This is legally correct from day one.</code></pre>
 
 <!-- SECTION 15: 24-WEEK PLAN -->
 <div class="section" id="weeklyplan">
-  <div class="section-label">Section 15 — Revised</div>
+  <div class="section-label">Section 15</div>
   <h2 class="section-title">24-WEEK PLAN & HOURS</h2>
-  <p>Revised from the original 18-week plan. Realistic hour estimates (2× buffer on complex integrations), web-first launch strategy, mobile added in Phase 2, and 3 buffer weeks built in. Total hours are higher but the plan is actually achievable.</p>
+  <p>This plan runs two tracks in parallel from Week 1: building the product and building the audience. The app does not launch until there is real content and real people ready. Mobile comes after the web version is proven. The moat features (audio ID, Heat Score) come after you know what users actually want.</p>
+
+  <div class="pillars" style="margin-bottom:24px;">
+    <div class="pillar moat">
+      <div class="pillar-num">TRACK A — ALL 24 WEEKS</div>
+      <div class="pillar-name">BUILD</div>
+      <p>Writing code, setting up infra, shipping features. Claude Code is your main tool. Budget 2–3 hours every day.</p>
+    </div>
+    <div class="pillar moat">
+      <div class="pillar-num">TRACK B — ALL 24 WEEKS</div>
+      <div class="pillar-name">GROW</div>
+      <p>TikTok, Instagram, DJ outreach, events, UM networking. This never stops. 30–60 min per day minimum.</p>
+    </div>
+  </div>
 
   <div class="card" style="border-color:#FF3366;margin-bottom:24px;">
-    <p style="color:#FF3366;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:2px;margin-bottom:8px;">⚠ KEY CHANGES FROM ORIGINAL</p>
-    <p style="font-size:13px;color:#ccc;margin:0;">Web launches at Week 16. Mobile builds Week 17–21. Audio/moat block given 5 weeks instead of 2. Three buffer weeks added (Weeks 11, 19, 23). App Store submitted Week 22 — not Week 18 — to account for Apple review delays.</p>
+    <p style="color:#FF3366;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:2px;margin-bottom:8px;">CRITICAL RULES FOR THIS PLAN</p>
+    <ul style="list-style:none;padding:0;">
+      <li style="font-size:13px;color:#ccc;padding:5px 0;border-bottom:1px solid #1a1a1a;">→ Do NOT skip the social media work in Weeks 1–8. The audience must exist before launch.</li>
+      <li style="font-size:13px;color:#ccc;padding:5px 0;border-bottom:1px solid #1a1a1a;">→ Do NOT build moat features (audio ID, Heat Score) before MVP is in real users' hands.</li>
+      <li style="font-size:13px;color:#ccc;padding:5px 0;border-bottom:1px solid #1a1a1a;">→ Do NOT launch mobile before web is proven and stable.</li>
+      <li style="font-size:13px;color:#ccc;padding:5px 0;">→ Buffer weeks are real — use them. Do not treat them as free weeks to add features.</li>
+    </ul>
   </div>
 
   <div style="background:#111;border-radius:12px;overflow:hidden;margin-bottom:32px;">
     <div class="week-row">
       <div class="week-cell header">Week</div>
-      <div class="week-cell header">Tasks</div>
-      <div class="week-cell header">Your Hours</div>
+      <div class="week-cell header">Build (Code)</div>
+      <div class="week-cell header">Grow (Audience)</div>
+      <div class="week-cell header">Hrs</div>
       <div class="week-cell header">Cost</div>
-      <div class="week-cell header">Cumulative</div>
     </div>
 
-    <!-- PHASE 1: FOUNDATION (Web only) -->
-    <div class="week-row" style="background:#111;">
-      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 1 — Foundation (Web)</div>
+    <!-- PHASE 1: FOUNDATION + AUDIENCE -->
+    <div class="week-row" style="background:#0d0d0d;">
+      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 1 — Foundation + Audience (Weeks 1–4)</div>
     </div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">01</span></div><div class="week-cell">Next.js setup, TypeScript, Tailwind, design system, color palette, fonts, folder structure. Apply for Spotify Extended Quota + ACRCloud bulk access on Day 1 — both have wait times.</div><div class="week-cell"><span class="week-hours">18 hrs</span></div><div class="week-cell"><span class="week-cost">$200</span></div><div class="week-cell"><span class="week-cum">$200</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">02</span></div><div class="week-cell">Supabase schema — all 22 tables, RLS policies, storage buckets, indexes, migrations. Test every RLS policy with a second user account before moving on.</div><div class="week-cell"><span class="week-hours">20 hrs</span></div><div class="week-cell"><span class="week-cost">$25</span></div><div class="week-cell"><span class="week-cum">$225</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">03</span></div><div class="week-cell">Auth (email + Google OAuth), role selection onboarding, protected routes, landing page (web). Verify auth works across all 6 role types.</div><div class="week-cell"><span class="week-hours">18 hrs</span></div><div class="week-cell"><span class="week-cost">$25</span></div><div class="week-cell"><span class="week-cum">$250</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">04</span></div><div class="week-cell">User profiles (all 6 roles — fan, DJ, producer, venue, promoter, label), discover directory, follow system, notification subscriptions.</div><div class="week-cell"><span class="week-hours">20 hrs</span></div><div class="week-cell"><span class="week-cost">$25</span></div><div class="week-cell"><span class="week-cum">$275</span></div></div>
 
-    <!-- PHASE 2: EVENTS & TICKETING -->
-    <div class="week-row" style="background:#111;">
-      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 2 — Events & Ticketing</div>
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">01</span></div>
+      <div class="week-cell">Next.js + TypeScript + Tailwind + Supabase project setup. Design system (colors, fonts, components). Folder structure. Apply for Apple Developer account ($99) on Day 1 — approval takes 1–2 days.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Create Instagram + TikTok. Post Day 1. First content: "Building the EDM app I wish existed." Post 3–5x/day TikTok, 1–2x/day IG from now on.</div>
+      <div class="week-cell"><span class="week-hours">20 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$249</span></div>
     </div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">05</span></div><div class="week-cell">Events CRUD (create, edit, publish, cancel), events page, event detail page. Festival pages (static).</div><div class="week-cell"><span class="week-hours">18 hrs</span></div><div class="week-cell"><span class="week-cost">$25</span></div><div class="week-cell"><span class="week-cum">$300</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">06</span></div><div class="week-cell">Stripe Connect onboarding for venues and promoters. Ticket purchase flow — Checkout session, webhook, QR code generation. Confirmation email via Resend. Test end-to-end with Stripe test mode before going live.</div><div class="week-cell"><span class="week-hours">22 hrs</span></div><div class="week-cell"><span class="week-cost">$54</span></div><div class="week-cell"><span class="week-cum">$354</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">07</span></div><div class="week-cell">Tonight Near Me — geolocation, Mapbox dark map, nearby events list + map pins. Apply for Apple Developer Program this week ($99) — 1–2 day approval needed before push notifications.</div><div class="week-cell"><span class="week-hours">18 hrs</span></div><div class="week-cell"><span class="week-cost">$178</span></div><div class="week-cell"><span class="week-cum">$532</span></div></div>
 
-    <!-- PHASE 3: THE MOAT -->
-    <div class="week-row" style="background:#111;">
-      <div class="week-cell" colspan="5" style="color:#E8FF47;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #333;">⭐ Phase 3 — The Moat (give this 5 weeks, not 2)</div>
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">02</span></div>
+      <div class="week-cell">Supabase schema — MVP tables only (users, profiles, posts, events, track_ids, follows, notifications). RLS policies. Storage buckets. Test every policy with a second account before moving on.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Write a list of 20 Miami DJs to target. Start following and engaging with their content genuinely. Do not DM yet.</div>
+      <div class="week-cell"><span class="week-hours">20 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$0</span></div>
     </div>
-    <div class="week-row" style="background:#0a0f00;"><div class="week-cell"><span class="week-num" style="color:#E8FF47;">08</span></div><div class="week-cell" style="color:#E8FF47;">⭐ SETLIST INTELLIGENCE Part 1 — upload pipeline architecture, audio segmentation, ACRCloud API integration. Do not proceed to Heat Score until a real set upload returns a real setlist.</div><div class="week-cell"><span class="week-hours">24 hrs</span></div><div class="week-cell"><span class="week-cost">$248</span></div><div class="week-cell"><span class="week-cum">$780</span></div></div>
-    <div class="week-row" style="background:#0a0f00;"><div class="week-cell"><span class="week-num" style="color:#E8FF47;">09</span></div><div class="week-cell" style="color:#E8FF47;">⭐ SETLIST INTELLIGENCE Part 2 — bulk fingerprinting endpoint, error handling, fallback chain (ACRCloud → Audd → AcoustID), setlist output UI. Real-world test with 5 actual DJ sets.</div><div class="week-cell"><span class="week-hours">24 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$879</span></div></div>
-    <div class="week-row" style="background:#0a0f00;"><div class="week-cell"><span class="week-num" style="color:#E8FF47;">10</span></div><div class="week-cell" style="color:#E8FF47;">⭐ Heat Score — nightly Supabase Edge Function, formula implementation, indexed column. Underground Radar page + feed widget + filters. Track pages (every track gets a page).</div><div class="week-cell"><span class="week-hours">22 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$978</span></div></div>
-    <div class="week-row" style="background:#1a0a00;"><div class="week-cell"><span class="week-num" style="color:#FF9500;">11</span></div><div class="week-cell" style="color:#FF9500;">🛑 BUFFER WEEK — catch up on Weeks 8–10 if behind. If on track: Where Was This Played history view, Notify Me When This Drops email trigger, Community ID requests and voting.</div><div class="week-cell"><span class="week-hours">16 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,077</span></div></div>
-    <div class="week-row" style="background:#0a0f00;"><div class="week-cell"><span class="week-num" style="color:#E8FF47;">12</span></div><div class="week-cell">Audio ID tool — Audd → ACRCloud → AcoustID pipeline for /identify endpoint. Community ID voting UI. This is separate from Setlist Intelligence — it's the single-track Shazam-style feature.</div><div class="week-cell"><span class="week-hours">20 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,176</span></div></div>
 
-    <!-- PHASE 4: SOCIAL & CONTENT -->
-    <div class="week-row" style="background:#111;">
-      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 4 — Social & Content</div>
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">03</span></div>
+      <div class="week-cell">Auth (email + Google OAuth), role selection onboarding (fan / DJ / producer / venue / promoter), protected routes, basic landing page. Verify auth works for all role types.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">DM first 5 DJs: "Building a Miami EDM platform — would love your feedback, not asking you to join yet." Go to one Miami event this weekend.</div>
+      <div class="week-cell"><span class="week-hours">18 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$0</span></div>
     </div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">13</span></div><div class="week-cell">Social feed — all post types (text, clip, set, release share, event share, teaser, video), compose modal, infinite scroll, city toggle.</div><div class="week-cell"><span class="week-hours">22 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,275</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">14</span></div><div class="week-cell">Underground TV — vertical video feed, upload pipeline, track recognition overlay, Following/For You/Live tabs. Video is complex — budget extra time for upload + transcoding.</div><div class="week-cell"><span class="week-hours">24 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,374</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">15</span></div><div class="week-cell">Releases page (Beatport RSS + Spotify new releases), city scenes pages, city rankings leaderboard, DJ Crate Sharing (crates + crate_tracks, follow curators).</div><div class="week-cell"><span class="week-hours">20 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,473</span></div></div>
 
-    <!-- WEB LAUNCH -->
-    <div class="week-row" style="background:#111;">
-      <div class="week-cell" colspan="5" style="color:#E8FF47;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #333;">🚀 Web Launch</div>
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">04</span></div>
+      <div class="week-cell">User profiles (all roles — bio, links, role badge, avatar). Follow system. Notification subscriptions. Discover/directory page. Profile is the identity — make it feel good.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">DM 5 more DJs. Reach out to 2–3 Miami venues or promoters on Instagram. Post first "app teaser" content — no link yet, just the concept.</div>
+      <div class="week-cell"><span class="week-hours">20 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$25</span></div>
     </div>
-    <div class="week-row" style="background:#0a1a00;border:1px solid #E8FF47;"><div class="week-cell"><span class="week-num" style="color:#E8FF47;">16</span></div><div class="week-cell" style="color:#E8FF47;font-weight:500;">🚀 WEB LAUNCH — Full RLS audit, rate limiting (Upstash Redis on all routes), security headers, Sentry client + server. Performance audit (Lighthouse). Soft launch to waitlist. ProductHunt prep.</div><div class="week-cell"><span class="week-hours">22 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,572</span></div></div>
 
-    <!-- PHASE 5: MOBILE -->
-    <div class="week-row" style="background:#111;">
-      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 5 — Mobile (Web is live, now add native)</div>
+    <!-- PHASE 2: MVP CORE -->
+    <div class="week-row" style="background:#0d0d0d;">
+      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 2 — MVP Core Features (Weeks 5–8)</div>
     </div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">17</span></div><div class="week-cell">Expo + React Native setup, EAS configuration, mobile onboarding (splash, role, city, follow 5, feed). Port auth and profiles to mobile.</div><div class="week-cell"><span class="week-hours">22 hrs</span></div><div class="week-cell"><span class="week-cost">$124</span></div><div class="week-cell"><span class="week-cum">$1,696</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">18</span></div><div class="week-cell">Push notifications — APNs (iOS) + FCM (Android) via Expo Notifications. Bottom tab nav (FEED / TONIGHT / TV / RADAR / YOU). Mobile feed + Tonight Near Me map.</div><div class="week-cell"><span class="week-hours">22 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,795</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">19</span></div><div class="week-cell">Fan Reputation System (XP/levels/badges/leaderboard), Booking Marketplace (inquiry form, inbox, 5% fee), Track Lineage (version tree).</div><div class="week-cell"><span class="week-hours">20 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,894</span></div></div>
-    <div class="week-row" style="background:#1a0a00;"><div class="week-cell"><span class="week-num" style="color:#FF9500;">20</span></div><div class="week-cell" style="color:#FF9500;">🛑 BUFFER WEEK — catch up on Weeks 17–19 if behind. If on track: Promoted placement self-serve dashboard, creator analytics (followers, reach, ticket sales, bookings).</div><div class="week-cell"><span class="week-hours">16 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$1,993</span></div></div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">21</span></div><div class="week-cell">Mobile QA on real iOS and Android devices — every screen, every user role. Fix all crashes, layout issues, and push notification edge cases.</div><div class="week-cell"><span class="week-hours">20 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$2,092</span></div></div>
 
-    <!-- APP STORE & LAUNCH -->
-    <div class="week-row" style="background:#111;">
-      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 6 — App Store & Full Launch</div>
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">05</span></div>
+      <div class="week-cell">Social feed — text, photo, video, event flyer post types. Compose modal. Infinite scroll. Like + comment. This is the core of the app — make it fast and buttery smooth.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Start posting "events this weekend in Miami" content. Screenshot format. Becomes a weekly staple. Engage with every comment on every post from now on.</div>
+      <div class="week-cell"><span class="week-hours">22 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$25</span></div>
     </div>
-    <div class="week-row"><div class="week-cell"><span class="week-num">22</span></div><div class="week-cell">App Store submission (iOS) + Google Play submission. Write store descriptions, screenshots, preview video. Submit early — Apple review takes 1–3 days, sometimes longer if changes requested.</div><div class="week-cell"><span class="week-hours">16 hrs</span></div><div class="week-cell"><span class="week-cost">$124</span></div><div class="week-cell"><span class="week-cum">$2,216</span></div></div>
-    <div class="week-row" style="background:#1a0a00;"><div class="week-cell"><span class="week-num" style="color:#FF9500;">23</span></div><div class="week-cell" style="color:#FF9500;">🛑 BUFFER WEEK — handle Apple review feedback / resubmission if needed. If approved: final performance audit, README + deployment docs, monitor for launch-day errors in Sentry.</div><div class="week-cell"><span class="week-hours">12 hrs</span></div><div class="week-cell"><span class="week-cost">$99</span></div><div class="week-cell"><span class="week-cum">$2,315</span></div></div>
-    <div class="week-row" style="background:#0a1a00;border:1px solid #E8FF47;"><div class="week-cell"><span class="week-num" style="color:#E8FF47;">24</span></div><div class="week-cell" style="color:#E8FF47;font-weight:500;">🚀 FULL LAUNCH — ProductHunt launch, DJ/venue outreach campaign, city #1 soft launch (Miami, Chicago, or London). Monitor Sentry, Supabase metrics, Stripe webhooks in real time.</div><div class="week-cell"><span class="week-hours">20 hrs</span></div><div class="week-cell"><span class="week-cost">$263</span></div><div class="week-cell"><span class="week-cum" style="color:#E8FF47;font-weight:bold;">$2,578</span></div></div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">06</span></div>
+      <div class="week-cell">Events — create/edit/publish event, event detail page, RSVP (no ticketing yet — just RSVP + link out to existing ticket page). Tonight Near Me — geolocation + Mapbox dark map + nearby events list.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Attend one Miami event. Meet people in person. Your pitch: "I'm building the Miami EDM app — takes 30 seconds to sign up when it launches." Collect Instagram handles.</div>
+      <div class="week-cell"><span class="week-hours">20 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$54</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">07</span></div>
+      <div class="week-cell">Track ID requests — upload a 30-second clip, community can comment answers, upvote correct IDs, mark as solved. This is the killer community feature. Make uploading clips dead simple on mobile browser.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Post 5 Track ID clips this week. These are your highest-engagement content. "ID? Heard this in Miami last weekend." Start tracking which posts perform best.</div>
+      <div class="week-cell"><span class="week-hours">22 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$25</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">08</span></div>
+      <div class="week-cell">Basic setlists — DJ can manually add tracks to a setlist, tag an event, make it public. Fan can view, comment, follow the DJ. This is the manual version before audio ID exists.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">DM remaining DJs from your list of 20. Target: at least 5 DJs committed to being early users. Offer them verified profile + free premium forever as early founders.</div>
+      <div class="week-cell"><span class="week-hours">18 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$25</span></div>
+    </div>
+
+    <!-- PHASE 3: PRE-LAUNCH SEEDING -->
+    <div class="week-row" style="background:#0d0d0d;">
+      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 3 — Pre-Launch Seeding (Weeks 9–12)</div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">09</span></div>
+      <div class="week-cell">Polish and harden MVP. Mobile-first UX pass on every screen. Fast loading. Easy posting. Fix anything broken or confusing. Sentry error tracking. Basic rate limiting on all API routes.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Seed the app. Create profiles for 5+ DJs (with their permission). Post events manually. Post 10+ track ID clips into the feed. App cannot feel empty at launch.</div>
+      <div class="week-cell"><span class="week-hours">18 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$25</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">10</span></div>
+      <div class="week-cell">Email + push notifications (new follower, event RSVP, track ID answered, new post from followed DJ). Resend for email. These bring users back — they are not optional.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Walk into 3 Miami venues in person. Show them the events feature on your phone. Offer free event listings forever. Goal: 2 venues committed to posting their events on Underground.</div>
+      <div class="week-cell"><span class="week-hours">20 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$25</span></div>
+    </div>
+
+    <div class="week-row" style="background:#1a0a00;">
+      <div class="week-cell"><span class="week-num" style="color:#FF9500;">11</span></div>
+      <div class="week-cell" style="color:#FF9500;">BUFFER — catch up on Weeks 9–10 if behind. If on track: add Stripe Connect for venue ticket links (basic integration), improve feed performance, fix any UX issues surfaced by early testers.</div>
+      <div class="week-cell" style="color:#FF9500;font-size:12px;">Pre-launch check: Do you have 20 DJs? 5 venues? 5 promoters? 3 photographers? 100 committed early users? If not, this week is recruiting, not building.</div>
+      <div class="week-cell"><span class="week-hours">16 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$25</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">12</span></div>
+      <div class="week-cell">Final pre-launch hardening. Full RLS audit — test every table as every role. Input validation on every API route. Reject oversized payloads. Security headers. Lighthouse performance audit — must hit 90+ on mobile.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Build hype. Post "launching in Miami next week" content. Give early DJs a sneak preview link. Create a waitlist or sign-up form. Set up a launch-day post series.</div>
+      <div class="week-cell"><span class="week-hours">18 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$99</span></div>
+    </div>
+
+    <!-- PHASE 4: PRIVATE LAUNCH -->
+    <div class="week-row" style="background:#0a1a00;border-left:3px solid #E8FF47;">
+      <div class="week-cell" colspan="5" style="color:#E8FF47;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #333;">PRIVATE LAUNCH — Weeks 13–15</div>
+    </div>
+
+    <div class="week-row" style="background:#0a1a00;">
+      <div class="week-cell"><span class="week-num" style="color:#E8FF47;">13</span></div>
+      <div class="week-cell" style="color:#E8FF47;">PRIVATE LAUNCH. Open to 100–300 people: your DJs, venues, UM friends, group chats. Monitor everything. Sentry, Supabase logs, Stripe webhooks. Watch for crashes. Be available to fix issues same day.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Send personal messages to every person you've talked to. "Underground is live — you're one of the first." Post the launch on TikTok and Instagram. No paid ads.</div>
+      <div class="week-cell"><span class="week-hours">20 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$99</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">14</span></div>
+      <div class="week-cell">Fix everything broken in Week 13. Not adding features — fixing. Talk to your early users directly. What do they actually use? What do they ignore? What confuses them? Build a simple analytics view (Supabase queries) to see behavior.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Study what posts are performing on TikTok and IG. Double down on the content type that works best. Ask early users to post about Underground — offer a shoutout or feature placement in return.</div>
+      <div class="week-cell"><span class="week-hours">18 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$99</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">15</span></div>
+      <div class="week-cell">Build whatever the data says users love most from Week 14. If Track IDs are winning: improve the ID experience, add voting, add solved/unsolved filter. If events are winning: improve Tonight Near Me, add saves, add calendar. Follow the data, not the plan.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Reach out to 2–3 Miami DJs with 20k–100k followers. Offer: verified profile, free premium forever, first access to fans, featured placement. One yes here is worth 1,000 downloads.</div>
+      <div class="week-cell"><span class="week-hours">20 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$99</span></div>
+    </div>
+
+    <!-- PHASE 5: PUBLIC MIAMI LAUNCH -->
+    <div class="week-row" style="background:#0a1a00;border-left:3px solid #E8FF47;">
+      <div class="week-cell" colspan="5" style="color:#E8FF47;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #333;">PUBLIC MIAMI LAUNCH — Week 16</div>
+    </div>
+
+    <div class="week-row" style="background:#0a1a00;border:1px solid #E8FF47;">
+      <div class="week-cell"><span class="week-num" style="color:#E8FF47;">16</span></div>
+      <div class="week-cell" style="color:#E8FF47;font-weight:500;">PUBLIC LAUNCH. Remove invite restriction. Push through every channel simultaneously: DJs post it, you post it, UM group chats, Reddit (r/electronicmusic, r/miami), Discord servers, in-person at any events this week.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Launch day content series: post every 2 hours on TikTok. "Underground just went live in Miami." Tag every DJ and venue that's on it. Run a Track ID contest with a prize (tickets, merch, feature).</div>
+      <div class="week-cell"><span class="week-hours">22 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$99</span></div>
+    </div>
+
+    <!-- PHASE 6: GROWTH + ADVANCED FEATURES -->
+    <div class="week-row" style="background:#0d0d0d;">
+      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 6 — Growth + Advanced Features (Weeks 17–20)</div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">17</span></div>
+      <div class="week-cell">Apply for Google Play Developer ($25). Underground TV — vertical video feed, upload pipeline, Following/For You tabs. Video is your biggest organic reach tool — make upload dead simple. Budget extra time for transcoding complexity.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Push to 500 users. Fraternities, UM clubs, EDM group chats. Every new user should get a personal welcome DM. Track weekly active users — this is the only metric that matters right now.</div>
+      <div class="week-cell"><span class="week-hours">24 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$124</span></div>
+    </div>
+
+    <div class="week-row" style="background:#0a0f00;">
+      <div class="week-cell"><span class="week-num" style="color:#E8FF47;">18</span></div>
+      <div class="week-cell" style="color:#E8FF47;">SETLIST INTELLIGENCE Part 1 — Only build this now because you have real users and know the app is working. Upload pipeline architecture, audio segmentation, ACRCloud API integration. Do not ship until a real set upload returns a real setlist.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Post "new feature dropping: upload your set and get the full tracklist automatically." Hype before it launches. Get 3 DJs to agree to be first testers.</div>
+      <div class="week-cell"><span class="week-hours">24 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$348</span></div>
+    </div>
+
+    <div class="week-row" style="background:#0a0f00;">
+      <div class="week-cell"><span class="week-num" style="color:#E8FF47;">19</span></div>
+      <div class="week-cell" style="color:#E8FF47;">SETLIST INTELLIGENCE Part 2 — bulk fingerprinting, fallback chain (ACRCloud → Audd → AcoustID), setlist output UI, real-world test with 5 actual DJ sets before shipping. Heat Score formula — nightly Edge Function, Underground Radar page.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Ship Setlist Intelligence publicly. This is your press moment: "Upload your set, get the full tracklist in minutes." DM Mixmag, DJ Mag, Magnetic Magazine with the pitch.</div>
+      <div class="week-cell"><span class="week-hours">24 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$199</span></div>
+    </div>
+
+    <div class="week-row" style="background:#1a0a00;">
+      <div class="week-cell"><span class="week-num" style="color:#FF9500;">20</span></div>
+      <div class="week-cell" style="color:#FF9500;">BUFFER — catch up on Weeks 18–19 if behind (audio integration is the hardest part of this whole build). If on track: Fan Reputation System (XP/levels/badges), creator analytics dashboard, promoted placements for venues.</div>
+      <div class="week-cell" style="color:#FF9500;font-size:12px;">Check retention: are users returning weekly? If WAU is flat or dropping, stop building and talk to users. What's broken? What's missing? Fix that first.</div>
+      <div class="week-cell"><span class="week-hours">16 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$199</span></div>
+    </div>
+
+    <!-- PHASE 7: MOBILE -->
+    <div class="week-row" style="background:#0d0d0d;">
+      <div class="week-cell" colspan="5" style="color:#888;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 16px;border-bottom:1px solid #222;">Phase 7 — Mobile App (Weeks 21–24)</div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">21</span></div>
+      <div class="week-cell">Expo + React Native setup, EAS configuration. Mobile onboarding: splash → role select → city → follow 5 DJs → feed. Port auth, profiles, feed, events, track IDs to mobile. Bottom tab nav: FEED / TONIGHT / RADAR / YOU.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">"Underground mobile is coming." Post sneak peeks of the mobile app UI. Build anticipation with your existing user base. Ask: what feature do you most need on mobile?</div>
+      <div class="week-cell"><span class="week-hours">24 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$99</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">22</span></div>
+      <div class="week-cell">Push notifications — APNs (iOS) + FCM (Android) via Expo. Mobile QA on real iOS + Android devices. Every screen, every role. Fix all crashes and layout issues. Push notifications are the single biggest retention driver — test every trigger thoroughly.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Build hype for mobile launch. Offer early access to first 100 people who DM the Instagram. Creates urgency + grows your following at the same time.</div>
+      <div class="week-cell"><span class="week-hours">22 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$99</span></div>
+    </div>
+
+    <div class="week-row">
+      <div class="week-cell"><span class="week-num">23</span></div>
+      <div class="week-cell">App Store submission (iOS) + Google Play. Write store listings, screenshots (use real Miami content), preview video. Apply for Apple Developer if not done. Submit early — Apple review takes 1–7 days. Handle any rejection feedback immediately.</div>
+      <div class="week-cell" style="color:#00D4FF;font-size:12px;">Announce app store launch on all channels. "Underground is now on iOS and Android." Tag every DJ, venue, and promoter that's on the platform. Ask them to post it to their audiences.</div>
+      <div class="week-cell"><span class="week-hours">18 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$124</span></div>
+    </div>
+
+    <div class="week-row" style="background:#1a0a00;">
+      <div class="week-cell"><span class="week-num" style="color:#FF9500;">24</span></div>
+      <div class="week-cell" style="color:#FF9500;">BUFFER — handle Apple review feedback / resubmission if needed. If approved and live: monitor Sentry, Supabase metrics, Stripe webhooks in real time. Fix any launch-day issues. Begin planning second city expansion (Chicago or NYC).</div>
+      <div class="week-cell" style="color:#FF9500;font-size:12px;">Month 6 review: Are you at 1,000 users? What feature do they love? What is the WAU retention rate? This data tells you what Underground actually is — and what to build next.</div>
+      <div class="week-cell"><span class="week-hours">14 hrs</span></div>
+      <div class="week-cell"><span class="week-cost">$199</span></div>
+    </div>
   </div>
 
   <div class="cost-split">
     <div class="cost-box">
-      <div class="amount">460</div>
+      <div class="amount">462</div>
       <div class="label">TOTAL HOURS OVER 24 WEEKS</div>
-      <div style="font-size:12px;color:#555;margin-top:8px;">~19 hrs/week · 2–3 hrs/day</div>
+      <div style="font-size:12px;color:#555;margin-top:8px;">~19 hrs/week · 2–3 hrs/day building + 30–60 min/day growing</div>
     </div>
     <div class="cost-box" style="border-color:#E8FF47;">
-      <div class="amount" style="color:#E8FF47;">$2,578</div>
-      <div class="label">REVISED TOTAL BUILD COST</div>
-      <div style="font-size:12px;color:#555;margin-top:8px;">+$744 vs original — 3 buffer weeks + realistic moat costs</div>
+      <div class="amount" style="color:#E8FF47;">~$2,500</div>
+      <div class="label">ESTIMATED TOTAL BUILD COST</div>
+      <div style="font-size:12px;color:#555;margin-top:8px;">Biggest variables: ACRCloud plan tier + Apple Developer account</div>
     </div>
   </div>
 
-  <div class="card" style="margin-top:24px;">
-    <h4>Why this plan differs from the original</h4>
-    <p style="font-size:13px;color:#ccc;">The original 18-week plan assumed near-perfect execution with Claude Code and zero integration friction. This plan adds a 2× hour buffer on the audio/moat block (Weeks 8–12), splits mobile into its own phase after web launches, inserts 3 buffer weeks at the most likely stall points, and moves App Store submission to Week 22 so Apple review delays don't block your launch date. The extra 6 weeks and ~$744 in infrastructure costs are the price of a plan you can actually hit.</p>
+  <h3>HOW THIS PLAN DIFFERS FROM TECH-ONLY PLANS</h3>
+  <div class="card">
+    <table style="margin:0;">
+      <tr><th>Old approach</th><th>This plan</th></tr>
+      <tr><td style="color:#888;">Build everything, then market</td><td style="color:#E8FF47;">Build audience from Day 1, in parallel</td></tr>
+      <tr><td style="color:#888;">Ship moat features in first 12 weeks</td><td style="color:#E8FF47;">Moat features after MVP is in real users' hands</td></tr>
+      <tr><td style="color:#888;">Launch globally from day one</td><td style="color:#E8FF47;">Miami only until retention is proven</td></tr>
+      <tr><td style="color:#888;">Mobile from the start</td><td style="color:#E8FF47;">Web first, mobile after web is proven</td></tr>
+      <tr><td style="color:#888;">Paid ads to get first users</td><td style="color:#E8FF47;">Manual outreach, DJ relationships, in-person</td></tr>
+      <tr><td style="color:#888;">Build what's on the roadmap</td><td style="color:#E8FF47;">Week 14–15: build whatever users actually use</td></tr>
+    </table>
+  </div>
+
+  <div class="card card-yellow" style="margin-top:24px;">
+    <p style="font-size:14px;color:#fff;font-weight:500;margin-bottom:8px;">The most important milestone is not Week 16 launch. It's Week 14 — when you look at the data and find out what people actually use.</p>
+    <p style="font-size:13px;color:#888;margin:0;">Everything before that is building toward that question. Everything after that is answering it.</p>
   </div>
 </div>
 

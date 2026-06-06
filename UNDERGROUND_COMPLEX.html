@@ -1099,123 +1099,151 @@ This is legally correct from day one.</code></pre>
 <!-- SECTION 14: ROADMAP -->
 <div class="section" id="roadmap">
   <div class="section-label">Section 14</div>
-  <h2 class="section-title">BUILD ROADMAP — 7 PHASES, 47 TASKS</h2>
-  <p>Each phase is fully shippable before the next begins. Build mobile and web in parallel from Phase 1.</p>
+  <h2 class="section-title">BUILD ROADMAP — ALL FEATURES, EVERY PHASE</h2>
+  <p>All 47 tasks across every feature are listed here in the order they get built. Web launches first. Mobile follows. Each phase is fully working before the next begins. This aligns with the 24-week plan and post-launch roadmap in Section 15.</p>
 
-  <div class="phase">
+  <div class="card" style="border-color:#E8FF47;margin-bottom:24px;">
+    <p style="font-family:'DM Mono',monospace;font-size:11px;color:#E8FF47;letter-spacing:2px;margin-bottom:8px;">HOW TO READ THIS</p>
+    <p style="font-size:13px;color:#ccc;margin:0;">Phases 1–3 = Weeks 1–16 (pre-launch). Phases 4–5 = Weeks 17–24 (post-launch growth). Phases 6–7 = Months 6–12 (post-traction). Phase 8 = Month 13+ (AI/scale). Everything is here. Nothing is cut.</p>
+  </div>
+
+  <div class="phase" style="border-color:#E8FF47;">
     <div class="phase-header">
-      <span class="phase-num">PHASE 1</span>
-      <span class="phase-name">FOUNDATION</span>
-      <span class="phase-duration">6–8 weeks</span>
+      <span class="phase-num">PHASE 1 — WEEKS 1–8</span>
+      <span class="phase-name">FOUNDATION + MVP</span>
+      <span class="phase-duration">Web only. Audience running in parallel.</span>
     </div>
     <ul>
-      <li><span class="task-num">01</span>Project setup — TypeScript, Tailwind, ESLint, GitHub, Vercel/EAS CI</li>
-      <li><span class="task-num">02</span>Supabase schema — all 22 tables, RLS policies, storage buckets, indexes</li>
-      <li><span class="task-num">03</span>Auth — email + Google OAuth, role selection, protected routes</li>
-      <li><span class="task-num">04</span>Landing page (web)</li>
-      <li><span class="task-num">05</span>Mobile onboarding — splash, role, city, follow 5, feed</li>
-      <li><span class="task-num">06</span>User profiles — role-specific (DJ, Producer, Venue, Label, Fan)</li>
-      <li><span class="task-num">07</span>Discover directory — DJs, Producers, Venues, Labels</li>
-      <li><span class="task-num">08</span>Follow system — follows table, notification subscriptions</li>
-      <li><span class="task-num">09</span>Push notifications — Expo Notifications setup, APNs + FCM</li>
+      <li><span class="task-num">01</span>Project setup — Next.js, TypeScript, Tailwind, ESLint, GitHub, Vercel CI</li>
+      <li><span class="task-num">02</span>Supabase schema — MVP tables (users, profiles, posts, events, track_ids, follows, notifications)</li>
+      <li><span class="task-num">03</span>Auth — email + Google OAuth, role selection (fan / DJ / producer / venue / promoter), protected routes</li>
+      <li><span class="task-num">04</span>User profiles — role-specific (DJ, Producer, Venue, Fan, Promoter)</li>
+      <li><span class="task-num">05</span>Discover directory — DJs, Producers, Venues by city</li>
+      <li><span class="task-num">06</span>Follow system — follows table, notification subscriptions</li>
+      <li><span class="task-num">07</span>Social feed — text, photo, video, event flyer post types, compose, infinite scroll, likes, comments</li>
+      <li><span class="task-num">08</span>Events — create/edit/publish, event detail page, RSVP + external ticket link</li>
+      <li><span class="task-num">09</span>Tonight Near Me — geolocation, Mapbox dark map, nearby events list + map pins</li>
+      <li><span class="task-num">10</span>Track ID requests — upload 30-second clip, community comments, upvote correct ID, mark solved</li>
+      <li><span class="task-num">11</span>Basic setlists — DJ manually builds setlist, tags event, publishes publicly</li>
+      <li><span class="task-num">12</span>Email + push notifications — new follower, track ID answered, event RSVP, new post from followed DJ</li>
     </ul>
   </div>
 
   <div class="phase">
     <div class="phase-header">
-      <span class="phase-num">PHASE 2</span>
-      <span class="phase-name">EVENTS & TICKETING</span>
-      <span class="phase-duration">4–5 weeks</span>
+      <span class="phase-num">PHASE 2 — WEEKS 9–16</span>
+      <span class="phase-name">PRIVATE LAUNCH → PUBLIC MIAMI LAUNCH</span>
+      <span class="phase-duration">Web. Seed content. Fix and learn. Go public Week 16.</span>
     </div>
     <ul>
-      <li><span class="task-num">10</span>Events CRUD — create, edit, publish, cancel</li>
-      <li><span class="task-num">11</span>Stripe Connect onboarding for venues and promoters</li>
-      <li><span class="task-num">12</span>Ticket purchase flow — Checkout session, webhook, QR code</li>
-      <li><span class="task-num">13</span>Ticket confirmation email via Resend</li>
-      <li><span class="task-num">14</span>Events page + event detail page</li>
-      <li><span class="task-num">15</span>Tonight Near Me — geolocation, map view, nearby events</li>
-      <li><span class="task-num">16</span>Festival pages — static initially, community setlists later</li>
+      <li><span class="task-num">13</span>Full UX polish — mobile-first pass on every screen, fast loading, smooth posting</li>
+      <li><span class="task-num">14</span>Rate limiting — Upstash Redis on all API routes (auth: 5 req/15min per IP)</li>
+      <li><span class="task-num">15</span>Full RLS audit — test every policy with a second account, every role</li>
+      <li><span class="task-num">16</span>Security headers — next.config.js, input validation, payload size limits</li>
+      <li><span class="task-num">17</span>Sentry — client + server error tracking, source maps, remove all console.log</li>
+      <li><span class="task-num">18</span>Performance audit — Lighthouse 90+ on mobile before public launch</li>
+      <li><span class="task-num">19</span>Content seeding — profiles, events, track IDs seeded before public launch</li>
+      <li><span class="task-num">20</span>Killer feature sprint — Week 14–15: build whatever private launch data says users love</li>
+      <li><span class="task-num">21</span>Public launch — remove invite restriction, push through all channels</li>
     </ul>
   </div>
 
   <div class="phase" style="border-color:#E8FF47;">
     <div class="phase-header">
-      <span class="phase-num" style="color:#E8FF47;">PHASE 3 — THE MOAT</span>
-      <span class="phase-name">CORE MOAT FEATURES</span>
-      <span class="phase-duration">6–8 weeks</span>
+      <span class="phase-num" style="color:#E8FF47;">PHASE 3 — WEEKS 17–24 — THE MOAT</span>
+      <span class="phase-name">AUDIO INTELLIGENCE + MOBILE</span>
+      <span class="phase-duration">These only get built because real users are already in the app.</span>
     </div>
     <ul>
-      <li><span class="task-num">17</span>Setlist Intelligence — upload pipeline, ACRCloud bulk, setlist output</li>
-      <li><span class="task-num">18</span>Heat Score — nightly Supabase Edge Function, indexed column</li>
-      <li><span class="task-num">19</span>Underground Radar — page, feed widget, filters</li>
-      <li><span class="task-num">20</span>Track Pages — every track gets a page (released + unreleased)</li>
-      <li><span class="task-num">21</span>Where Was This Played — track_plays table, history view, timeline</li>
-      <li><span class="task-num">22</span>Notify Me When This Drops — track_notifications, Resend trigger</li>
-      <li><span class="task-num">23</span>Audio ID tool — Audd → ACRCloud → AcoustID pipeline</li>
-      <li><span class="task-num">24</span>Community ID requests and voting</li>
+      <li><span class="task-num">22</span>Underground TV — vertical video feed, upload pipeline, Following/For You tabs</li>
+      <li><span class="task-num">23</span>Setlist Intelligence Part 1 — upload pipeline, audio segmentation, ACRCloud API</li>
+      <li><span class="task-num">24</span>Setlist Intelligence Part 2 — bulk fingerprinting, fallback chain (ACRCloud → Audd → AcoustID), setlist output UI</li>
+      <li><span class="task-num">25</span>Heat Score — nightly Supabase Edge Function, formula, indexed column, Underground Radar page</li>
+      <li><span class="task-num">26</span>Track Pages — every track gets its own page (released + unreleased)</li>
+      <li><span class="task-num">27</span>Audio ID tool — single-track Shazam-style: Audd → ACRCloud → AcoustID for /identify endpoint</li>
+      <li><span class="task-num">28</span>Expo + React Native mobile app — onboarding, auth, profiles, feed, events, track IDs ported</li>
+      <li><span class="task-num">29</span>Push notifications mobile — APNs (iOS) + FCM (Android) via Expo Notifications</li>
+      <li><span class="task-num">30</span>App Store + Google Play submission</li>
     </ul>
   </div>
 
   <div class="phase">
     <div class="phase-header">
-      <span class="phase-num">PHASE 4</span>
-      <span class="phase-name">SOCIAL & CONTENT</span>
-      <span class="phase-duration">4–5 weeks</span>
+      <span class="phase-num">PHASE 4 — MONTH 6–7</span>
+      <span class="phase-name">TICKETING + REPUTATION</span>
+      <span class="phase-duration">Unlocks at 500 weekly active users.</span>
     </div>
     <ul>
-      <li><span class="task-num">25</span>Social feed — all post types, compose modal, infinite scroll</li>
-      <li><span class="task-num">26</span>Underground TV — vertical video feed, upload, track recognition</li>
-      <li><span class="task-num">27</span>Releases page — Beatport RSS, Spotify new releases (released + unreleased)</li>
-      <li><span class="task-num">28</span>City scenes pages — local feed, events, artists</li>
-      <li><span class="task-num">29</span>City Rankings — leaderboard powered by Heat Score + events</li>
-      <li><span class="task-num">30</span>DJ Crate Sharing — crates + crate_tracks, follow curators</li>
-      <li><span class="task-num">31</span>Fan Reputation System — XP, levels, badges, leaderboard</li>
+      <li><span class="task-num">31</span>Full Stripe Connect ticketing — venues sell in-app, Checkout, QR code, webhook</li>
+      <li><span class="task-num">32</span>Ticket confirmation email — Resend template, QR attached, event details</li>
+      <li><span class="task-num">33</span>Fan Reputation System — XP, levels (ID Hunter → Scene Legend), badges, city leaderboard</li>
+      <li><span class="task-num">34</span>City Rankings leaderboard — weekly, powered by Heat Score + events + post volume</li>
+      <li><span class="task-num">35</span>Creator analytics dashboard — followers, reach, RSVPs, ticket sales</li>
     </ul>
   </div>
 
   <div class="phase">
     <div class="phase-header">
-      <span class="phase-num">PHASE 5</span>
-      <span class="phase-name">MARKETPLACE</span>
-      <span class="phase-duration">3–4 weeks</span>
+      <span class="phase-num">PHASE 5 — MONTH 8–9</span>
+      <span class="phase-name">CONTENT DEPTH + DISCOVERY</span>
+      <span class="phase-duration">Unlocks at 1,000 weekly active users.</span>
     </div>
     <ul>
-      <li><span class="task-num">32</span>Booking Marketplace — full DJ booking, inquiry form, inbox, 5% fee</li>
-      <li><span class="task-num">33</span>Track Lineage — version tree, artist tagging, community suggestions</li>
-      <li><span class="task-num">34</span>Promoted placement self-serve dashboard</li>
-      <li><span class="task-num">35</span>Creator analytics dashboard — followers, reach, ticket sales, bookings</li>
+      <li><span class="task-num">36</span>Releases page — Beatport RSS + Spotify new releases, Heat Score beside each track</li>
+      <li><span class="task-num">37</span>DJ Crate Sharing — public/private genre-tagged collections, follow curators</li>
+      <li><span class="task-num">38</span>City Scenes pages — /scenes/[city]: local feed, artists, venues, events, releases</li>
+      <li><span class="task-num">39</span>Track Lineage — version tree: Original → Bootleg → Edit → VIP → Official Release</li>
+      <li><span class="task-num">40</span>Where Was This Played — full history view per track, every DJ, every city</li>
+      <li><span class="task-num">41</span>Notify Me When This Drops — email + push when unreleased track hits Beatport/Spotify</li>
+      <li><span class="task-num">42</span>Festival pages — community setlist submission + voting</li>
+      <li><span class="task-num">43</span>Promoted placement dashboard — venues pay to feature events, self-serve, Stripe billing</li>
     </ul>
   </div>
 
   <div class="phase">
     <div class="phase-header">
-      <span class="phase-num">PHASE 6</span>
-      <span class="phase-name">ADVANCED FEATURES</span>
-      <span class="phase-duration">4–6 weeks</span>
+      <span class="phase-num">PHASE 6 — MONTH 10–12</span>
+      <span class="phase-name">MARKETPLACE + SECOND CITY</span>
+      <span class="phase-duration">Unlocks at 2,500 users + proven retention.</span>
     </div>
     <ul>
-      <li><span class="task-num">36</span>Mix Compatibility Engine (BPM + Camelot Wheel — after data at scale)</li>
-      <li><span class="task-num">37</span>AI Mix Recommendations (Setlist transition data — requires 10K+ uploads)</li>
-      <li><span class="task-num">38</span>Producer Feedback Marketplace (after producer community scales)</li>
-      <li><span class="task-num">39</span>Sample Recognition (if WhoSampled partnership secured)</li>
-      <li><span class="task-num">40</span>Playlist Builder cross-platform exports (Spotify, Apple Music, etc.)</li>
+      <li><span class="task-num">44</span>Booking Marketplace — browse DJs, inquiry form, inbox, 5% booking fee</li>
+      <li><span class="task-num">45</span>Second city launch — NYC or Chicago, same seeding playbook as Miami</li>
+      <li><span class="task-num">46</span>Mix Compatibility Engine — BPM + Camelot Wheel track matching</li>
+      <li><span class="task-num">47</span>Playlist Builder — build from Underground tracks, export to Spotify/Apple Music/Beatport</li>
+      <li><span class="task-num">48</span>Label dashboards — verified label pages, release management, fan analytics</li>
     </ul>
   </div>
 
   <div class="phase">
     <div class="phase-header">
-      <span class="phase-num">PHASE 7</span>
-      <span class="phase-name">HARDENING</span>
-      <span class="phase-duration">2–3 weeks</span>
+      <span class="phase-num">PHASE 7 — MONTH 13+</span>
+      <span class="phase-name">AI + SCALE FEATURES</span>
+      <span class="phase-duration">Unlocks at 5,000+ users across multiple cities.</span>
     </div>
     <ul>
-      <li><span class="task-num">41</span>Full RLS audit — test every policy with a second user account</li>
-      <li><span class="task-num">42</span>Rate limiting — Upstash Redis on all API routes</li>
-      <li><span class="task-num">43</span>Security headers — next.config.js</li>
-      <li><span class="task-num">44</span>Sentry — frontend + backend, source maps, remove all console.log</li>
-      <li><span class="task-num">45</span>Mobile QA — real iOS and Android devices, every screen</li>
-      <li><span class="task-num">46</span>Performance audit — Lighthouse, feed load time, push latency</li>
-      <li><span class="task-num">47</span>README + deployment docs</li>
+      <li><span class="task-num">49</span>AI Mix Recommendations — setlist transition data → next track suggestions (requires 10K+ uploads)</li>
+      <li><span class="task-num">50</span>Producer Feedback Marketplace — upload unreleased, get structured feedback from DJs + fans</li>
+      <li><span class="task-num">51</span>Sample Recognition — identifies samples, links to original (WhoSampled API partnership)</li>
+      <li><span class="task-num">52</span>Advanced Heat Score V2 — cross-city momentum, DJ prestige weighting, early-adopter bonuses</li>
+      <li><span class="task-num">53</span>Underground Intelligence Reports — weekly automated report for DJs/venues (email + in-app)</li>
+      <li><span class="task-num">54</span>Third city or international — London or Berlin</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">PHASE 8 — ONGOING</span>
+      <span class="phase-name">HARDENING (every phase)</span>
+      <span class="phase-duration">Security and quality are not a phase — they run throughout.</span>
+    </div>
+    <ul>
+      <li><span class="task-num">—</span>RLS audit after every schema change — test every policy with every role</li>
+      <li><span class="task-num">—</span>Rate limiting review after every new API route</li>
+      <li><span class="task-num">—</span>Input validation on every new endpoint</li>
+      <li><span class="task-num">—</span>Sentry monitoring — review errors weekly, fix anything with 10+ occurrences</li>
+      <li><span class="task-num">—</span>Performance check — Lighthouse mobile after every major feature ship</li>
+      <li><span class="task-num">—</span>Mobile QA on real devices before every app store update</li>
     </ul>
   </div>
 </div>
@@ -1516,6 +1544,149 @@ This is legally correct from day one.</code></pre>
   <div class="card card-yellow" style="margin-top:24px;">
     <p style="font-size:14px;color:#fff;font-weight:500;margin-bottom:8px;">The most important milestone is not Week 16 launch. It's Week 14 — when you look at the data and find out what people actually use.</p>
     <p style="font-size:13px;color:#888;margin:0;">Everything before that is building toward that question. Everything after that is answering it.</p>
+  </div>
+
+  <h3>POST-LAUNCH ROADMAP — MONTHS 6 THROUGH 18</h3>
+  <p>Every feature below is fully designed, schema-ready, and planned. They are not being cut — they are being sequenced. Nothing ships post-launch until the user data from Miami tells you it's the right next move.</p>
+
+  <div class="card" style="border-color:#E8FF47;margin-bottom:24px;">
+    <p style="font-family:'DM Mono',monospace;font-size:12px;color:#E8FF47;letter-spacing:2px;margin-bottom:8px;">THE RULE FOR ALL POST-LAUNCH FEATURES</p>
+    <p style="font-size:13px;color:#ccc;margin:0;">Each batch below only unlocks when the previous milestone is hit. Do not build Month 8 features if Month 6 metrics aren't met. Growth unlocks complexity.</p>
+  </div>
+
+  <!-- MILESTONE 1 -->
+  <div class="phase" style="border-color:#E8FF47;">
+    <div class="phase-header">
+      <span class="phase-num" style="color:#E8FF47;">MILESTONE</span>
+      <span class="phase-name" style="color:#E8FF47;">500 WEEKLY ACTIVE USERS · MIAMI</span>
+      <span class="phase-duration" style="color:#E8FF47;">~Month 5</span>
+    </div>
+    <ul>
+      <li><span class="task-num">A</span>Unlocks this batch. Check: are people posting, returning, and following DJs every week?</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">BATCH 1</span>
+      <span class="phase-name">FULL TICKETING + REPUTATION</span>
+      <span class="phase-duration">Month 6–7</span>
+    </div>
+    <ul>
+      <li><span class="task-num">01</span><strong style="color:#fff;">Full Stripe Connect Ticketing</strong> — venues sell tickets directly in-app, Checkout session, QR code delivery, webhook. RSVP links in MVP become real purchases. This is your first real revenue stream.</li>
+      <li><span class="task-num">02</span><strong style="color:#fff;">Fan Reputation System</strong> — XP points, levels (ID Hunter → Crate Digger → Underground Expert → Scene Legend), badges, city leaderboard. Earn XP by solving track IDs, posting, attending events, following artists.</li>
+      <li><span class="task-num">03</span><strong style="color:#fff;">City Rankings Leaderboard</strong> — weekly leaderboard powered by Heat Score + event activity + post volume. Week-over-week changes. Makes Miami feel like a competitive scene.</li>
+      <li><span class="task-num">04</span><strong style="color:#fff;">Creator Analytics Dashboard</strong> — DJs and venues see followers, reach, event RSVPs, ticket sales. This is the feature that makes DJs recruit other DJs for you.</li>
+      <li><span class="task-num">05</span><strong style="color:#fff;">Ticket Confirmation Email</strong> — Resend template, QR code attached, event details. Automated on Stripe webhook success.</li>
+    </ul>
+  </div>
+
+  <!-- MILESTONE 2 -->
+  <div class="phase" style="border-color:#E8FF47;">
+    <div class="phase-header">
+      <span class="phase-num" style="color:#E8FF47;">MILESTONE</span>
+      <span class="phase-name" style="color:#E8FF47;">1,000 WEEKLY ACTIVE USERS · MIAMI</span>
+      <span class="phase-duration" style="color:#E8FF47;">~Month 7</span>
+    </div>
+    <ul>
+      <li><span class="task-num">A</span>Unlocks this batch. Check: are DJs uploading setlists? Are fans solving track IDs? Is the feed active daily?</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">BATCH 2</span>
+      <span class="phase-name">CONTENT + DISCOVERY DEPTH</span>
+      <span class="phase-duration">Month 8–9</span>
+    </div>
+    <ul>
+      <li><span class="task-num">06</span><strong style="color:#fff;">Releases Page</strong> — Beatport RSS + Spotify new releases feed. Released and unreleased tracks in one place. Updated daily. Shows Heat Score beside each release.</li>
+      <li><span class="task-num">07</span><strong style="color:#fff;">DJ Crate Sharing</strong> — public/private genre-tagged track collections. Fans can follow curators like they follow DJs. Crates become discovery tools.</li>
+      <li><span class="task-num">08</span><strong style="color:#fff;">City Scenes Pages</strong> — /scenes/miami: city-filtered feed, local artists, local venues, upcoming events, local releases. Sets the template for every future city.</li>
+      <li><span class="task-num">09</span><strong style="color:#fff;">Track Lineage</strong> — full version tree for every track: Original → Bootleg → Edit → VIP Mix → Festival Edit → Official Release. Artist tagging and community suggestions.</li>
+      <li><span class="task-num">10</span><strong style="color:#fff;">Where Was This Played</strong> — full history view per track: every set it appeared in, which DJs played it, what city, what date. Pulls from setlist intelligence data.</li>
+      <li><span class="task-num">11</span><strong style="color:#fff;">Notify Me When This Drops</strong> — fan marks an unreleased track. Gets an email + push notification the moment it appears on Beatport or Spotify. Powered by track_notifications + Resend.</li>
+      <li><span class="task-num">12</span><strong style="color:#fff;">Festival Pages</strong> — static festival pages upgraded to community setlists. Fans submit tracks from the stage, others vote, finalized setlist gets exported.</li>
+      <li><span class="task-num">13</span><strong style="color:#fff;">Promoted Placement Dashboard</strong> — venues and promoters pay to feature their event at the top of the Miami feed or Tonight Near Me. Self-serve, Stripe billing, impression reporting.</li>
+    </ul>
+  </div>
+
+  <!-- MILESTONE 3 -->
+  <div class="phase" style="border-color:#E8FF47;">
+    <div class="phase-header">
+      <span class="phase-num" style="color:#E8FF47;">MILESTONE</span>
+      <span class="phase-name" style="color:#E8FF47;">2,500 USERS · RETENTION PROVEN · SECOND CITY DECISION</span>
+      <span class="phase-duration" style="color:#E8FF47;">~Month 9–10</span>
+    </div>
+    <ul>
+      <li><span class="task-num">A</span>Unlocks this batch. Check: weekly active rate above 40%? Revenue from tickets? DJs organically sharing the platform?</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">BATCH 3</span>
+      <span class="phase-name">MARKETPLACE + SECOND CITY</span>
+      <span class="phase-duration">Month 10–12</span>
+    </div>
+    <ul>
+      <li><span class="task-num">14</span><strong style="color:#fff;">Booking Marketplace</strong> — browse DJs by fee range, dates available, cities played, audience size. Direct inquiry form → inbox → contract. Underground takes 5% of booking fee.</li>
+      <li><span class="task-num">15</span><strong style="color:#fff;">Second City Launch</strong> — apply everything learned from Miami. Same pre-launch seeding playbook: 20 DJs, 5 venues, 5 promoters, 100 early fans before public launch. Most likely NYC or Chicago.</li>
+      <li><span class="task-num">16</span><strong style="color:#fff;">Mix Compatibility Engine</strong> — BPM + Camelot Wheel matching between tracks in the database. Suggests harmonic next tracks in a set. Only useful once 1,000+ setlists are uploaded.</li>
+      <li><span class="task-num">17</span><strong style="color:#fff;">Playlist Builder</strong> — build a playlist from any combination of tracks in Underground. Export to Spotify, Apple Music, Beatport wishlist, or shareable link.</li>
+      <li><span class="task-num">18</span><strong style="color:#fff;">Label Dashboards</strong> — labels get a verified page, can post releases, see Heat Scores for their catalog, post pre-release content, monitor fan reactions.</li>
+    </ul>
+  </div>
+
+  <!-- MILESTONE 4 -->
+  <div class="phase" style="border-color:#E8FF47;">
+    <div class="phase-header">
+      <span class="phase-num" style="color:#E8FF47;">MILESTONE</span>
+      <span class="phase-name" style="color:#E8FF47;">5,000+ USERS · MULTI-CITY · REVENUE POSITIVE</span>
+      <span class="phase-duration" style="color:#E8FF47;">~Month 12+</span>
+    </div>
+    <ul>
+      <li><span class="task-num">A</span>Unlocks this batch. These features require real scale to be useful — they are not shortcuts.</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-num">BATCH 4</span>
+      <span class="phase-name">AI + ADVANCED INTELLIGENCE</span>
+      <span class="phase-duration">Month 13–18</span>
+    </div>
+    <ul>
+      <li><span class="task-num">19</span><strong style="color:#fff;">AI Mix Recommendations</strong> — uses setlist transition data to recommend what track to play next based on the current track, BPM, key, and the crowd energy signals from the feed. Requires 10,000+ uploaded sets to be accurate.</li>
+      <li><span class="task-num">20</span><strong style="color:#fff;">Producer Feedback Marketplace</strong> — producers upload unreleased tracks and get structured feedback from DJs, fans, and other producers. DJs can flag tracks as "I'd play this." Creates a discovery pipeline from producer to DJ to crowd.</li>
+      <li><span class="task-num">21</span><strong style="color:#fff;">Sample Recognition</strong> — identifies samples within a track and links to the original. Requires WhoSampled API partnership or similar. Shows the lineage of influence across electronic music.</li>
+      <li><span class="task-num">22</span><strong style="color:#fff;">Advanced Heat Score V2</strong> — adds crowd energy signals, cross-city momentum, DJ prestige weighting, and early-adopter bonuses. More nuanced than V1 formula but only meaningful with city-scale data.</li>
+      <li><span class="task-num">23</span><strong style="color:#fff;">Underground Intelligence Reports</strong> — weekly automated report for DJs and venues: your top tracks this week, what's trending in your city, what your audience is listening to. Email + in-app.</li>
+      <li><span class="task-num">24</span><strong style="color:#fff;">Third City + International</strong> — London or Berlin. EDM culture is global. Miami and a US second city proves the model domestically. London or Berlin proves it internationally.</li>
+    </ul>
+  </div>
+
+  <div class="card card-yellow" style="margin-top:24px;">
+    <p style="font-family:'DM Mono',monospace;font-size:12px;color:#E8FF47;letter-spacing:2px;margin-bottom:12px;">FULL FEATURE COUNT</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:#E8FF47;line-height:1;">8</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;">MVP features<br>shipped Week 1–16</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:#E8FF47;line-height:1;">4</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;">Advanced features<br>shipped Week 17–24</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:#E8FF47;line-height:1;">12</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;">Post-launch features<br>Batches 1–3</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:#E8FF47;line-height:1;">6</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888;">AI/scale features<br>Batch 4 (Month 13+)</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:#888;margin-top:16px;margin-bottom:0;">30 total features across all phases. Nothing is cut. Everything has a place. The order is what makes this winnable.</p>
   </div>
 </div>
 
